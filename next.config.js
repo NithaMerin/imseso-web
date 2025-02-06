@@ -1,11 +1,12 @@
-// next.config.js
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  output: 'export', // Enable static export
-  basePath: isGithubActions ? '/website-imseso' : '', // Adjust basePath for GitHub Pages
-  assetPrefix: isGithubActions ? '/website-imseso/' : '', // Adjust assetPrefix for GitHub Pages
+  output: "export", // Important for static export
+  assetPrefix: isProd ? "/imseso-web/" : "", // Set repo name
+  images: {
+    unoptimized: true, // Required since Next.js does not optimize images in static exports
+  },
 };
 
 module.exports = nextConfig;

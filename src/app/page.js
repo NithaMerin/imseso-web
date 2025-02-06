@@ -55,7 +55,7 @@ const HomePage = () => {
 
       {/* Second Section: Other Components */}
       <div className="min-h-screen flex flex-col items-center justify-center bg-white">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8">Welcome</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-8">Welcome to IMSESO WEBSITE..</h1>
         {/* Add other components here */}
       </div>
 

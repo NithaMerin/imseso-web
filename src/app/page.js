@@ -2,8 +2,9 @@
 import React,{useState, useEffect} from 'react';
 import FooterTab from './components/FooterTab';
 import Link from 'next/link';
+import { Grid2, Typography, Stack, Button } from '@mui/material';
 
-const images = ["./Home1.png", "./Home3.png"];
+const images = ["./Home1.png","./Home2.jpg", "./Home3.png"];
 
 const HomePage = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -11,12 +12,12 @@ const HomePage = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false); // Start fade-out
+      setFade(false); 
       setTimeout(() => {
         setCurrentImage((prev) => (prev + 1) % images.length);
-        setFade(true); // Start fade-in
-      }, 1500); // Adjust this timeout to match transition duration
-    }, 7000); // Change image every 5 seconds
+        setFade(true); 
+      }, 1800); 
+    }, 7000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -53,6 +54,9 @@ const HomePage = () => {
         </div>
       </div>
 
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white">
+          <h1>ImSEOS</h1>
+      </div>
       {/* Second Section: Other Components */}
       <div className="min-h-screen flex flex-col items-center justify-center bg-white">
         <h1 className="text-3xl font-bold text-gray-800 mb-8">Welcome to IMSESO WEBSITE..</h1>

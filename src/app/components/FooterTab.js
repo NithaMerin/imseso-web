@@ -4,18 +4,18 @@ import Link from 'next/link';
 const FooterTab = () => {
   return (
     <footer className="bg-sky-800 text-white py-8 border-sky-800">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container text-center mx-auto px-4">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
           {/* About Section */}
           <div>
-            <h3 className="text-xl font-bold mb-4">IMSESO</h3>
+            {/* <h3 className="text-xl font-bold mb-4">IMSESO</h3> */}
             <p className="text-sm">
             &copy; {new Date().getFullYear()} IMSESO. All rights reserved.
           </p>
           </div>
 
           {/* Quick Links Section */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -34,18 +34,19 @@ const FooterTab = () => {
                 <Link href="/contact" className="hover:text-gray-200">Contact</Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Information Section */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="text-sm space-y-2">
-              <li>Email: info@imseso.org</li>
-              <li>Phone: +1 (123) 456-7890</li>
-              <li>Address: 123 IMSESO Street, City, Country</li>
+              <li>Email: imseso2013@gmail.com</li>
+              <li>Phone: +94766722724 / +94778874221</li>
+              <li>Negombo Office : Don Bosco Technical Centre, Don Bosco Mawatha, Ethukala, Negombo, Sri Lanka.</li>
+              <li>Mannar Office : Alavakai, Murunkan, Mannar, Sri Lanka.</li>
             </ul>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     </footer>
   );

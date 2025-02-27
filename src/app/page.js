@@ -2,7 +2,6 @@
 import React,{useState, useEffect} from 'react';
 import FooterTab from './components/FooterTab';
 import Link from 'next/link';
-import { Grid2, Typography, Stack, Button } from '@mui/material';
 
 const images = ["./Home1.png","./Home2.jpg", "./Home3.png"];
 

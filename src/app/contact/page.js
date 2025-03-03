@@ -18,7 +18,7 @@ export default function page() {
       <div className="container lg:w-10/12 mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-900 font-extrabold">A PROMISE WITH CONFIDENCE!</h2>
         <p className="mt-4 text-lg text-gray-700 italic">
-        We are proud to be an organization you can trust, and we invite you to learn about our financial accountability.
+        We are proud to be an organization you can trust, and we invite you to colobrate with us for sustainable development  of Sri Lanka.
         </p>
         <h3 className="text-4xl font-bold text-sky-700 mt-8">FIND US</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 px-4 md:px-0">

@@ -9,14 +9,15 @@ import {
   FaEnvelope,
   FaPhoneAlt,
 } from "react-icons/fa";
-import FooterTab from "../components/FooterTab";
+import FooterTab from "../components/FooterTab"; 
+import "../text.css"
 
 export default function page() {
   return (
     <>
-    <section id="contact" className="py-16 bg-gray-100">
-      <div className="container lg:w-10/12 mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 font-extrabold">A PROMISE WITH CONFIDENCE!</h2>
+    <section id="contact" className="py-16 bg-gray-100 ">
+      <div className="container lg:w-10/12 mx-auto text-center head-oswald">
+        <h2 className="text-4xl font-bold text-gray-900 font-extrabold ">A PROMISE WITH CONFIDENCE!</h2>
         <p className="mt-4 text-lg text-gray-700 italic">
         We are proud to be an organization you can trust, and we invite you to colobrate with us for sustainable development  of Sri Lanka.
         </p>
@@ -113,7 +114,7 @@ export default function page() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors body-oswald"
               >
                 Send Message
               </button>

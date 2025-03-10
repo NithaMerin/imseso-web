@@ -1,0 +1,39 @@
+.typing-effect {
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Keep text in one line */
+    border-right: 3px solid black; /* Cursor effect */
+    animation: typing 10s steps(60, end), blink-caret 0.75s step-end infinite;
+    font-family: 'Courier New', monospace; /* Monospace font for a typewriter feel */
+    color: #ff6347; /* Text color */
+    line-height: 1; /* Line height for better readability */
+    margin: 0 auto; /* Center the text container */
+    padding: 10px; /* Add some padding */
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0%; /* Start with no text */
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #ff6347; /* Tomato red cursor */
+    }
+  }
+  
+  .typing-effect:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+  }
+
+  .body-oswald {
+    font-family: 'Lobster', cursive; /* Monospace font for a typewriter feel */
+  }
+
+  .head-oswald {
+    font-family: 'Arial', sans-serif; /* Monospace font for a typewriter feel */
+  }

@@ -8,19 +8,18 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-sky-700 p-4 border-b-4 border-sky-800">
+    <nav className="bg-sky-700 p-2 border-b-4 border-sky-800">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo and Organization Name */}
         <div className="flex items-center">
-          <img src="imlogo.png" alt="IMSESO Logo" className="h-10 w-10" />
-          <h1 className="text-white text-2xl font-bold ml-2">IMSESO</h1>
+          <img src="imlogo.png" alt="IMSESO Logo" className="h-12 w-12 bg-white rounded-full shadow-2xl" />
+          <h1 className="text-white text-3xl font-bold ml-2 head-oswald">IMSESO</h1>
         </div>
 
         {/* Navigation Links */}
-        <ul className="flex space-x-6">
+        <ul className="flex space-x-6 text-xl body-oswald">
           {[
             { href: "/", label: "Home" },
-            { href: "/about", label: "About Us" },
+            { href: "/about", label: "About Us"},
             { href: "/program", label: "Programs & Impact" },
             { href: "/media", label: "Media Room" },
             { href: "/contact", label: "Contact" },
@@ -30,8 +29,8 @@ const Navbar = () => {
                 href={href}
                 className={`transition duration-300 ${
                   pathname === href
-                    ? "text-yellow-300 font-bold "
-                    : "text-white hover:text-gray-200"
+                    ? "text-yellow-300 font-extrabold "
+                    : "text-white hover:text-yellow-100"
                 }`}
               >
                 {label}
@@ -43,7 +42,7 @@ const Navbar = () => {
         {/* Donate Button */}
         <div>
           <Link href="/donate">
-            <button className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100 transition duration-300">
+            <button className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100 transition duration-300 body-oswald">
               Donate
             </button>
           </Link>

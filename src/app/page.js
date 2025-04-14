@@ -32,7 +32,7 @@ const HomePage = () => {
           </div>
         </div>
       {/* First Section: Image Carousel and Text */}
-      <div className="container flex flex-col items-center gap-4 m-4">
+      <div className="container flex flex-col items-center gap-4 m-4 ml-8">
        <div className="w-[1200px] h-[500px] p-2 flex justify-center items-center">
         {/* Carousel */}
         <Carousel

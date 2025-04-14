@@ -23,7 +23,6 @@ export default function page() {
         </p>
         <h3 className="text-4xl font-bold text-sky-700 mt-8">FIND US</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 px-4 md:px-0">
-          {/* Card 1 - Call Us */}
           <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
             <div className="flex justify-center">
               <div className="bg-white p-4 rounded-full mb-4">

@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <ul className="flex space-x-6 text-xl body-oswald">
+        <ul className="flex space-x-6 text-xl head-oswald">
           {[
             { href: "/", label: "Home" },
             { href: "/about", label: "About Us"},
@@ -42,7 +42,7 @@ const Navbar = () => {
         {/* Donate Button */}
         <div>
           <Link href="/donate">
-            <button className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100 transition duration-300 body-oswald">
+            <button className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100 transition duration-300 head-oswald">
               Donate
             </button>
           </Link>

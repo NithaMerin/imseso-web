@@ -21,8 +21,8 @@ const Navbar = () => {
             { href: "/", label: "Home" },
             { href: "/about", label: "About Us"},
             { href: "/program", label: "Programs & Impact" },
-            { href: "/media", label: "Media Room" },
-            { href: "/contact", label: "Contact" },
+            // { href: "/media", label: "Media Room" },
+            { href: "/contact", label: "Contact Us" },
           ].map(({ href, label }) => (
             <li key={href}>
               <Link

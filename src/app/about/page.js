@@ -73,6 +73,7 @@ const AboutPage = () => {
           <br />
           <span className="text-sm pl-5">(Physical, Developmental, Behavioral/Emotional, Sensory impairments as well as Learning and Intellectual disabilities)</span>
         </li>
+        <li className="leading-snug">Promoting Non-Violent Communication (NVC).</li>
         <li className="leading-snug">Youth Empowerment</li>
         <li className="leading-snug">Poverty Alleviation and Food security</li>
         <li className="leading-snug">Climate change and Environmental sustainability</li>

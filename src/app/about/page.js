@@ -64,14 +64,18 @@ const AboutPage = () => {
         IMSESO mainly focus on Empowering  Children, youth and Marginalized communities in the  underprivileged villages and 
         hill country  of Sri Lanka.  
       </p>
-       <ul className="list-disc list-inside">
-        <li>Education and Skills development</li>
-        <li>Child protection and Child Rights</li>
-        <li>Physical Health and   Mental Health & well-being</li>
-        <li>Empowerment of special Needs</li>
-        <li>Youth Empowerment</li>
-        <li>Poverty Alleviation and Food security</li>
-        <li>Climate change and Environmental sustainability</li>
+      <ul className="list-disc list-inside text-gray-800 space-y-2 pl-5">
+        <li className="leading-snug">Education and Skills development</li>
+        <li className="leading-snug">Child protection and Child Rights</li>
+        <li className="leading-snug">Physical Health and Mental Health & well-being</li>
+        <li className="leading-snug">
+          Empowerment of Children and Adolescents with special needs
+          <br />
+          <span className="text-sm pl-5">(Physical, Developmental, Behavioral/Emotional, Sensory impairments as well as Learning and Intellectual disabilities)</span>
+        </li>
+        <li className="leading-snug">Youth Empowerment</li>
+        <li className="leading-snug">Poverty Alleviation and Food security</li>
+        <li className="leading-snug">Climate change and Environmental sustainability</li>
       </ul>
      </div>
     </div>

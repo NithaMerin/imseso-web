@@ -17,11 +17,11 @@ const HomePage = () => {
       <div className=" flex items-center justify-center">
           <div className="rounded-3xl shadow-4xl p-6 w-300 text-left">
             <h1 className="text-4xl font-black text-blue-500 head-oswald">
-              Happiness is not something ready-made
+              We Believe In
             </h1>
-            <div className="w-220">
+            <div className="w-250">
             <h1 className="typing-effect w-full text-4xl font-black mb-6 bg-white text-yellow-300"> 
-              because, It comes from your own actions..
+             Social Empowerment with Peaceful Environment..
             </h1>
             </div>
             <Link href="/donate">

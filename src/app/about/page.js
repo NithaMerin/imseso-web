@@ -132,8 +132,8 @@ const AboutPage = () => {
                   <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
                     <img src='./about/pa1.png' className='w-full h-full rounded-xl shadow-xl'/>
                   </div>
-                    <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Dr Anna Garbacz</h3>
-                    <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Phd in Psychology and CNVC Certified trainer<br/>Consultant for Mental health and well-beingand NVC</p>
+                    <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Dr. Anna Garbacz</h3>
+                    <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Phd in Psychology & CNVC Certified trainer<br/>Consultant for Mental health & well-being and NVC</p>
                 </div>
                 {/* <!-- Second Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
@@ -141,7 +141,7 @@ const AboutPage = () => {
                     <img src='./about/pa2.png' className='w-full h-full rounded-xl shadow-xl'/>
                   </div>
                     <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mrs. Ada Bienkowska LLB</h3>
-                    <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>CNVC Certified Trainer<br/>Consultant for NVC and Project Development</p>
+                    <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>CNVC Certified Trainer<br/>Consultant for NVC & Project Development</p>
                 </div>
             </div>
         </div>
@@ -152,7 +152,7 @@ const AboutPage = () => {
                  <div className='w-36 h-32 shadow-xl rounded-xl overflow-hidden'>
                     <img src='./about/pa6.png' className='w-full h-full rounded-xl shadow-xl'/>
                   </div>
-                    <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mr.Hans & Mrs.Erna</h3>
+                    <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mr. Hans & Mrs. Erna</h3>
                     <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>NVC Certified Trainers<br/>Consultants for Child development & NVC</p>
                 </div>
                 <div className='flex flex-col items-center mx-4 mb-8'>
@@ -266,7 +266,7 @@ const AboutPage = () => {
       <div className="container mx-auto px-4 mb-4">
        <h3 className="text-2xl text-white font-extrabold my-8 bg-blue-500 p-4 text-center">THE ADMINISTRATION COMMITEE</h3>
         <div className='flex justify-center mb-4'>
-              <div className='flex flex-row justify-center'>
+              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-items-center justify-center gap-6'>
                   {/* <!-- First Column --> */}
                   <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>

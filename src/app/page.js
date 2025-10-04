@@ -113,7 +113,7 @@ const HomePage = () => {
             <h3 className="text-xl font-extrabold text-gray-800 head-oswald">Interplast UK (Charity) </h3>
             <div className="mt-4">
             <div className="text-gray-800">
-              <div className="mb-2 w-100 md:w-200">
+              <div className="mb-2 w-100 sm:w-auto md:w-200">
                 <p className="head-oswald">
                   Interplast UK is an International Organization of Plastic Surgeons and associated
                    professionals who provide free reconstructive surgery for underprivileged patients 

@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="bg-sky-700 p-3 border-b-4 border-sky-800">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <img src="imlogo.png" alt="IMSESO Logo" className="h-10 w-10 bg-white rounded-full shadow-2xl" />
+          <img src={'/imlogo.png'} alt="IMSESO Logo" className="h-10 w-10 bg-white rounded-full shadow-2xl" />
           <h1 className="text-white text-2xl md:text-3xl font-bold ml-2 head-oswald">IMSESO</h1>
         </div>
 

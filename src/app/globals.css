@@ -26,6 +26,17 @@ body {
   height: 100%;
 }
 
+/* Ensure carousel images behave consistently across browsers (including Safari) */
+.carousel .slide img,
+.carousel img,
+.react-responsive-carousel .slide img {
+  width: 100%;
+  height: 420px; /* fixed height for consistent scaling; overridden by responsive classes */
+  object-fit: cover;
+  -webkit-object-fit: cover; /* Safari */
+  display: block;
+}
+
 .outline-text {
   -webkit-text-stroke: 0.4px black;
 }

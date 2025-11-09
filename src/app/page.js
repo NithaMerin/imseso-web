@@ -1,13 +1,12 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import FooterTab from "./components/FooterTab";
 import Link from "next/link";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { motion } from "framer-motion";
 import "./text.css";
 
-const images = ["./Home1.png", "./Home2.jpg", "./Home3.png"]; // Ensure paths start with /
+const images = ["/Home1.png", "/Home2.jpg", "/Home3.png", "/home4.jpg", "/home5.jpg"]; // Use absolute paths from public/
 
 const HomePage = () => {
   const carouselRef = useRef(null); // Ref to control the carousel
@@ -20,7 +19,7 @@ const HomePage = () => {
               We Believe In
             </h1>
             <div className="w-full">
-            <h1 className="typing-effect w-full text-xl md:text-4xl font-black mb-6 bg-white text-yellow-300"> 
+            <h1 className="typing-effect w-full text-xl md:text-4xl font-black mb-6 bg-white text-yellow-300">
              Social Empowerment with Peaceful Environment..
             </h1>
             </div>
@@ -66,7 +65,7 @@ const HomePage = () => {
           <h3 className="text-xl font-extrabold text-blue-500 head-oswald">ABOUT IMSESO </h3>
            <div className="mt-4">
             <div className="text-gray-800 h-30 md:h-40">
-               <img src='./icons/about.jpg' className="w-full h-40 md:h-48 object-cover justify-center rounded"/>
+               <img src={'/icons/about.jpg'} alt="About IMSESO" className="w-full h-40 md:h-48 object-cover justify-center rounded"/>
             </div>
           </div>
        </div>
@@ -76,8 +75,8 @@ const HomePage = () => {
        <h3 className="text-xl font-extrabold text-blue-500 head-oswald">OUR IMPACT</h3>
         <div className="mt-4">
         <div className="text-gray-800  h-30 md:h-40">
-          <img src='./icons/impact.jpg' className="w-full h-40 md:h-48 object-cover justify-center rounded" />
-      
+          <img src={'/icons/impact.jpg'} alt="Our Impact" className="w-full h-40 md:h-48 object-cover justify-center rounded" />
+
             </div>
           </div>
        </div>
@@ -87,7 +86,7 @@ const HomePage = () => {
        <h3 className="text-xl font-extrabold text-blue-500 head-oswald">DONATE</h3>
         <div className="mt-4">
         <div className="text-gray-800  h-30 md:h-40">
-          <img src='./icons/donate.jpg' className="w-full h-40 md:h-48 object-cover justify-center rounded"/>
+          <img src={'/icons/donate.jpg'} alt="Donate" className="w-full h-40 md:h-48 object-cover justify-center rounded"/>
         </div>
        </div>
      </div>
@@ -97,7 +96,7 @@ const HomePage = () => {
        <h3 className="text-xl font-extrabold text-blue-500 head-oswald">CONTACT US </h3>
         <div className="mt-4">
         <div className="text-gray-800 h-30 md:h-40">
-          <img src='./icons/contact.jpg' className="w-full h-40 md:h-48 object-cover justify-center rounded"/>
+          <img src={'/icons/contact.jpg'} alt="Contact Us" className="w-full h-40 md:h-48 object-cover justify-center rounded"/>
         </div>
        </div>
      </div>
@@ -116,8 +115,8 @@ const HomePage = () => {
               <div className="mb-2 w-100 sm:w-auto md:w-200">
                 <p className="head-oswald">
                   Interplast UK is an International Organization of Plastic Surgeons and associated
-                   professionals who provide free reconstructive surgery for underprivileged patients 
-                   in the developing world. Dr.Charles Viva is Co-Founder and Head of the Organization. 
+                   professionals who provide free reconstructive surgery for underprivileged patients
+                   in the developing world. Dr.Charles Viva is Co-Founder and Head of the Organization.
                 </p>
               </div>
             </div>

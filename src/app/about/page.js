@@ -28,7 +28,7 @@ const AboutPage = () => {
 
           {/* Image on the right */}
           <div className="animate-slide-in-left w-full md:w-1/3 flex justify-center md:justify-end items-start mt-6 md:mt-0">
-            <img src='./icons/kids.jpg' className='w-full md:w-80 h-48 md:h-80 rounded shadow-xl object-cover' />
+            <img src={'/icons/kids.jpg'} alt="Children program" className='w-full md:w-80 h-48 md:h-80 rounded shadow-xl object-cover' />
           </div>
         </div>
       </div>
@@ -74,6 +74,7 @@ const AboutPage = () => {
           <span className="text-sm pl-5">(Physical, Developmental, Behavioral/Emotional, Sensory impairments as well as Learning and Intellectual disabilities)</span>
         </li>
         <li className="leading-snug">Promoting Non-Violent Communication (NVC).</li>
+          <li className="leading-snug">Peace building and Reconciliation</li>
         <li className="leading-snug">Youth Empowerment</li>
         <li className="leading-snug">Poverty Alleviation and Food security</li>
         <li className="leading-snug">Climate change and Environmental sustainability</li>
@@ -85,8 +86,8 @@ const AboutPage = () => {
         <h1 className="text-4xl text-blue-500 font-extrabold text-center my-8 m-6">
           The Registered Certificate of IMSESEO
         </h1>
-        <a href="./icons/certificateOfImseso.jpg" target="_blank" rel="noopener noreferrer">
-          <img src='./icons/certificateOfImseso.jpg' className='max-w-full w-64 md:w-96 h-auto cursor-pointer object-contain' />
+        <a href="/icons/certificateOfImseso.jpg" target="_blank" rel="noopener noreferrer">
+          <img src={'/icons/certificateOfImseso.jpg'} alt="Certificate of IMSESO" className='max-w-full w-64 md:w-96 h-auto cursor-pointer object-contain' />
         </a>
       </div>
     </div>
@@ -95,7 +96,7 @@ const AboutPage = () => {
         <h1 className="text-4xl text-blue-500 font-extrabold text-center my-8 m-6">
           Organization Organogram
         </h1>
-          <img src='./icons/structure.jpg' className='max-w-full w-80 md:w-120 h-auto cursor-pointer object-contain' />
+          <img src={'/icons/structure.jpg'} alt="Organization structure" className='max-w-full w-100 md:w-180 h-auto cursor-pointer object-contain' />
       </div>
     </div>
     <div className=" mb-4 bg-[url(/imlogo1.png)] bg-cover bg-center mt-4 p-4 relative head-oswald"> 
@@ -104,13 +105,13 @@ const AboutPage = () => {
      </h1>
       {/* Patrons Section */}
       <div className="container mx-auto px-4 mb-4">
-       <h3 className="text-2xl text-white font-extrabold p-4 bg-blue-500 my-8 text-center">PATRONS & ADVISORS OF IMSESO</h3>
+       <h3 className="text-2xl text-white font-extrabold p-4 bg-blue-500 my-8 text-center">PATRONS & CONSULTANS OF IMSESO</h3>
         <div className='flex justify-center mb-4'>
               <div className='flex flex-col md:flex-row justify-center gap-6'>
                   {/* <!-- First Column --> */}
                   <div className='flex flex-col items-center mx-4 mb-8 '>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                      <img src='./about/pa4.png' className='w-full h-full rounded-xl shadow-xl'/>
+                      <img src={'/about/pa4.png'} alt="Dr Charles" className='w-full h-full rounded-xl shadow-xl'/>
                     </div>
                       <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] font-bold text-center rounded-full my-2 mb-0">Dr. Charles viva MBBS, F.R.C.S </h3>
                       <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Senior Consultant Plastic Aesthetic and Hand surgeon <br />Founder of Interplast UK</p>
@@ -118,7 +119,7 @@ const AboutPage = () => {
                   {/* <!-- Second Column --> */}
                   <div className='flex flex-col items-center mx-4 mb-8'>
                   <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                      <img src='./about/pa5.png' className='w-full h-full rounded-xl shadow-xl'/>
+                      <img src={'/about/pa5.png'} alt="Rev Dr Christlin" className='w-full h-full rounded-xl shadow-xl'/>
                     </div>
                       <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Rev. Dr. Christlin P. Rajendram S.J</h3>
                       <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Former Rector of Trincomalee campus, <br />Eastern University of Sri Lanka</p>
@@ -130,7 +131,7 @@ const AboutPage = () => {
                 {/* <!-- First Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                   <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                    <img src='./about/pa1.png' className='w-full h-full rounded-xl shadow-xl'/>
+                    <img src={'/about/pa1.png'} alt="Dr Anna" className='w-full h-full rounded-xl shadow-xl'/>
                   </div>
                     <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Dr. Anna Garbacz</h3>
                     <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Phd in Psychology & CNVC Certified trainer<br/>Consultant for Mental health & well-being and NVC</p>
@@ -138,26 +139,46 @@ const AboutPage = () => {
                 {/* <!-- Second Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                  <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                    <img src='./about/pa2.png' className='w-full h-full rounded-xl shadow-xl'/>
+                    <img src={'/about/pa2.png'} alt="Mrs Ada" className='w-full h-full rounded-xl shadow-xl'/>
                   </div>
-                    <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mrs. Ada Bienkowska LLB</h3>
+                    <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mrs. Ada Bienkowska LLM</h3>
                     <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>CNVC Certified Trainer<br/>Consultant for NVC & Project Development</p>
                 </div>
             </div>
         </div>
+          <div className='flex justify-center mb-4'>
+              <div className='flex flex-col md:flex-row justify-center gap-6'>
+                  {/* <!-- First Column --> */}
+                  <div className='flex flex-col items-center mx-4 mb-8'>
+                      <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
+                          <img src={'/about/ramunusha.png'} alt="Ramanusha" className='w-full h-full rounded-xl shadow-xl'/>
+                      </div>
+                      <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mrs. Ramanusha Poopalaratnam </h3>
+                      <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>M.A in Sociology & CNVC Certified trainer in <br/> Sri Lanka. Consultant for peace building & NVC</p>
+                  </div>
+                  {/* <!-- Second Column --> */}
+                  <div className='flex flex-col items-center mx-4 mb-8'>
+                      <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
+                          <img src={'/about/maryan.png'} alt="Mariyan" className='w-full h-full rounded-xl shadow-xl'/>
+                      </div>
+                      <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mr. Mariyan Croos </h3>
+                      <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Program Manager for Child and Livelihood Development</p>
+                  </div>
+              </div>
+          </div>
         <div className='flex justify-center mb-4'>
             <div className='flex flex-col md:flex-row justify-center gap-6'>
                 {/* <!-- Second Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                  <div className='w-36 h-32 shadow-xl rounded-xl overflow-hidden'>
-                    <img src='./about/pa6.png' className='w-full h-full rounded-xl shadow-xl'/>
+                    <img src={'/about/pa6.png'} alt="Hans & Erna" className='w-full h-full rounded-xl shadow-xl'/>
                   </div>
                     <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mr. Hans & Mrs. Erna</h3>
                     <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>NVC Certified Trainers<br/>Consultants for Child development & NVC</p>
                 </div>
                 <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/pa3.png' className='w-full h-full object-cover'/>
+                        <img src={'/about/pa3.png'} alt="Rev C Eric" className='w-full h-full object-cover'/>
                     </div>
                     <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Rev. C. Eric Jeevaraj MBA (USA)</h3>
                     <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Westminster Uk <br/>Advisor for International Collaboration</p>
@@ -171,7 +192,7 @@ const AboutPage = () => {
        <h3 className="text-2xl text-white p-4 my-2 font-extrabold my-8 text-center bg-blue-500">THE CHIEF EXECUTIVE COMMITEE OF IMSESO</h3>
         <div className='flex flex-col justify-center items-center mb-4 pb-4'>
          <div className='w-44 h-48 bg-gardient-to-r from-cyan-500 to-blue-500 shadow-xl rounded-xl overflow-hidden'>
-          <img src='./about/ab1.png'  className='w-full h-full rounded-xl shadow-xl'/>
+          <img src={'/about/ab1.png'} alt="Founder"  className='w-full h-full rounded-xl shadow-xl'/>
          </div>
           <h3 className="text-m text-white bg-blue-500 p-2 w-[300px] text-center font-bold rounded-full my-2 mb-0">Mr.Constantine Santiago</h3>
           <p className='text-xs text-black bg-blue-200 p-2 w-[250px] text-center font-normal'>Founder, President & Executive Director</p>
@@ -181,7 +202,7 @@ const AboutPage = () => {
                 {/* <!-- First Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                   <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                    <img src='./about/ab2.png' className='w-full h-full rounded-xl shadow-xl'/>
+                    <img src={'/about/ab2.png'} alt="Member" className='w-full h-full rounded-xl shadow-xl'/>
                   </div>
                     <h3 className="text-m text-white bg-blue-500 p-2 w-[250px] text-center font-bold rounded-full my-2 mb-0">Mr. S. Wilfred</h3>
                     <p className='text-xs text-black bg-blue-200 p-2 w-[200px] text-center font-normal '>Secretary</p>
@@ -189,14 +210,14 @@ const AboutPage = () => {
                 {/* <!-- Second Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                  <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                    <img src='./about/ab3.png' className='w-full h-full rounded-xl shadow-xl'/>
+                    <img src={'/about/ab3.png'} alt="Member" className='w-full h-full rounded-xl shadow-xl'/>
                   </div>
                     <h3 className="text-m text-white bg-blue-500 p-2 w-[250px] text-center font-bold rounded-full my-2 mb-0">Mr. S. Asaippilai</h3>
                     <p className='text-xs text-black bg-blue-200 p-2 w-[200px] text-center font-normal '>Vice President</p>
                 </div>
                 <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ab4.png' className='w-full h-full object-cover'/>
+                        <img src={'/about/ab4.png'} alt="Member" className='w-full h-full object-cover'/>
                     </div>
                     <h3 className="text-m text-white bg-blue-500 p-2 w-[250px] text-center font-bold rounded-full my-2 mb-0">Mr. P. Nesaratnam</h3>
                     <p className='text-xs text-black bg-blue-200 p-2 w-[200px] text-center font-normal'>Treasurer</p>
@@ -210,7 +231,7 @@ const AboutPage = () => {
                 {/* <!-- First Column --> */}
                 <div className='flex flex-col items-center'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ab5.png' className='w-full h-full object-cover'/>
+                        <img src={'/about/ab5.png'} alt="Member" className='w-full h-full object-cover'/>
                     </div>
                     <h3 className="text-sm text-white bg-blue-500 p-2 w-40 md:w-[250px] text-center font-bold rounded-full my-2 mb-0">Mr. A.D.Jerald Almeda</h3>
                     {/* <p className='text-xs text-gray-500 font-bold'>Treasurer</p> */}
@@ -218,7 +239,7 @@ const AboutPage = () => {
                 {/* <!-- Second Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ab6.png' className='w-full h-full object-cover'/>
+                        <img src={'/about/ab6.png'} alt="Member" className='w-full h-full object-cover'/>
                     </div>
                     <h3 className="text-sm text-white bg-blue-500 p-2 w-40 md:w-[250px] text-center font-bold rounded-full my-2 mb-0">Mr. S.Francis</h3>
                     {/* <p className='text-xs text-gray-500 font-bold'>Treasurer</p> */}
@@ -226,7 +247,7 @@ const AboutPage = () => {
                 {/* <!-- Third Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ab7.png' className='w-full h-full object-cover'/>
+                        <img src={'/about/ab7.png'} alt="Member" className='w-full h-full object-cover'/>
                     </div>
                     <h3 className="text-sm text-white bg-blue-500 p-2 w-40 md:w-[250px] text-center font-bold rounded-full my-2 mb-0">Mr. M.Mariyaluthakaran</h3>
                     {/* <p className='text-xs text-gray-500 font-bold'>Treasurer</p> */}
@@ -238,7 +259,7 @@ const AboutPage = () => {
                  {/* <!-- Fourth Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ab8.png' className='w-full h-full object-cover'/>
+                        <img src={'/about/ab8.png'} alt="Member" className='w-full h-full object-cover'/>
                     </div>
                     <h3 className="text-sm text-white bg-blue-500 p-2 w-40 md:w-[250px] text-center font-bold rounded-full my-2 mb-0">Mr. M.Shalika Fernando</h3>
                     {/* <p className='text-xs text-gray-500 font-bold'>Treasurer</p> */}
@@ -246,7 +267,7 @@ const AboutPage = () => {
                 {/* <!-- Sixth Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ab10.png' className='w-full h-full object-cover'/>
+                        <img src={'/about/ab10.png'} alt="Member" className='w-full h-full object-cover'/>
                     </div>
                     <h3 className="text-sm text-white bg-blue-500 p-2 w-[250px] text-center font-bold rounded-full my-2 mb-0">Mrs. Christhuthas Ugetha</h3>
                     {/* <p className='text-xs text-gray-500 font-bold'>Treasurer</p> */}
@@ -254,7 +275,7 @@ const AboutPage = () => {
                 {/* <!-- Seventh Column --> */}
                 <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ab12.png' className='w-full h-full object-cover'/>
+                        <img src={'/about/ab12.png'} alt="Member" className='w-full h-full object-cover'/>
                     </div>
                     <h3 className="text-sm text-white bg-blue-500 p-2 w-[250px] text-center font-bold rounded-full my-2 mb-0">Mrs.Judit Shiyamini Thayalarajan</h3>
                     {/* <p className='text-xs text-gray-500 font-bold'>Treasurer</p> */}
@@ -264,62 +285,62 @@ const AboutPage = () => {
       </div>
       {/* {Administration Commitee} */}
       <div className="container mx-auto px-4 mb-4">
-       <h3 className="text-2xl text-white font-extrabold my-8 bg-blue-500 p-4 text-center">THE ADMINISTRATION COMMITEE</h3>
+       <h3 className="text-2xl text-white p-4 my-2 font-extrabold my-8 text-center bg-blue-500">THE ADMINISTRATION COMMITEE</h3>
         <div className='flex justify-center mb-4'>
               <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-items-center justify-center gap-6'>
                   {/* <!-- First Column --> */}
                   <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                      <img src='./about/ad2.png' className='w-full h-full rounded-xl shadow-xl'/>
+                      <img src={'/about/ad2.png'} alt="Member" className='w-full h-full rounded-xl shadow-xl'/>
                     </div>
                       <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Mr. Jerome Samson </h3>
-                      <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>Program Manager</p>
+                      <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>Program Manager for youth development , Peace building and Drug prevention.</p>
                   </div>
                   {/* <!-- Second Column --> */}
                   <div className='flex flex-col items-center mx-4 mb-8'>
                   <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                      <img src='./about/ad1.png' className='w-full h-full rounded-xl shadow-xl'/>
+                      <img src={'/about/ad1.png'} alt="Member" className='w-full h-full rounded-xl shadow-xl'/>
                     </div>
                       <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Mr. C.Canisharithan</h3>
-                      <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>Accountant</p>
+                      <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>Finance and Logistics Manager</p>
                   </div>
               </div>
           </div>
-          <div className='flex justify-center mb-4'>
-            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 justify-items-center justify-center gap-6'>
-                {/* <!-- First Column --> */}
-                <div className='flex flex-col items-center mx-4 mb-8'>
-                  <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                    <img src='./about/ad3.png' className='w-full h-full rounded-xl shadow-xl'/>
-                  </div>
-                    <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Miss. M.Leevenika</h3>
-                    <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>District Coordinator - Mannar</p>
-                </div>
-                {/* <!-- Second Column --> */}
-                <div className='flex flex-col items-center mx-4 mb-8'>
-                 <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                    <img src='./about/ad4.png' className='w-full h-full rounded-xl shadow-xl'/>
-                  </div>
-                    <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Miss. I.Junisha</h3>
-                    <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>District Coordinator - Vavuniya</p>
-                </div>
-                <div className='flex flex-col items-center mx-4 mb-8'>
-                    <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ad5.png' className='w-full h-full object-cover'/>
-                    </div>
-                    <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Mrs. S.Sharmila</h3>
-                    <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>District Coordinator - Badulla</p>
-                </div>
-              
-                <div className='flex flex-col items-center mx-4 mb-8'>
-                    <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                        <img src='./about/ad7.png' className='w-full h-full object-cover'/>
-                    </div>
-                    <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Miss. S.Jenethra</h3>
-                    <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>District Coordinator - Galle</p>
-                </div>
-            </div>
-        </div>
+        {/*  <div className='flex justify-center mb-4'>*/}
+        {/*    <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 justify-items-center justify-center gap-6'>*/}
+        {/*        /!* <!-- First Column --> *!/*/}
+        {/*        <div className='flex flex-col items-center mx-4 mb-8'>*/}
+        {/*          <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>*/}
+        {/*            <img src='./about/ad3.png' className='w-full h-full rounded-xl shadow-xl'/>*/}
+        {/*          </div>*/}
+        {/*            <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Miss. M.Leevenika</h3>*/}
+        {/*            <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>District Coordinator - Mannar</p>*/}
+        {/*        </div>*/}
+        {/*        /!* <!-- Second Column --> *!/*/}
+        {/*        <div className='flex flex-col items-center mx-4 mb-8'>*/}
+        {/*         <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>*/}
+        {/*            <img src='./about/ad4.png' className='w-full h-full rounded-xl shadow-xl'/>*/}
+        {/*          </div>*/}
+        {/*            <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Miss. I.Junisha</h3>*/}
+        {/*            <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>District Coordinator - Vavuniya</p>*/}
+        {/*        </div>*/}
+        {/*        <div className='flex flex-col items-center mx-4 mb-8'>*/}
+        {/*            <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>*/}
+        {/*                <img src='./about/ad5.png' className='w-full h-full object-cover'/>*/}
+        {/*            </div>*/}
+        {/*            <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Mrs. S.Sharmila</h3>*/}
+        {/*            <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>District Coordinator - Badulla</p>*/}
+        {/*        </div>*/}
+        {/*      */}
+        {/*        <div className='flex flex-col items-center mx-4 mb-8'>*/}
+        {/*            <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>*/}
+        {/*                <img src='./about/ad7.png' className='w-full h-full object-cover'/>*/}
+        {/*            </div>*/}
+        {/*            <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Miss. S.Jenethra</h3>*/}
+        {/*            <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>District Coordinator - Galle</p>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</div>*/}
       </div>
     </div>
 
@@ -387,3 +408,4 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+

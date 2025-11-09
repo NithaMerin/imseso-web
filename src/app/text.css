@@ -12,7 +12,10 @@
   
   @keyframes typing {
     0% {
-      width: 0%; /* Start with no text */
+      width: 0;
+    }
+    100% {
+      width: 100%;
     }
   }
   

@@ -159,10 +159,10 @@ const AboutPage = () => {
                   {/* <!-- Second Column --> */}
                   <div className='flex flex-col items-center mx-4 mb-8'>
                       <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
-                          <img src={'/about/maryan.png'} alt="Mariyan" className='w-full h-full rounded-xl shadow-xl'/>
+                          <img src={'/about/lee.png'} alt="Lee" className='w-full h-full rounded-xl shadow-xl'/>
                       </div>
-                      <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mr. Mariyan Croos </h3>
-                      <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Program Manager for Child and Livelihood Development</p>
+                      <h3 className="text-m text-white bg-blue-500 p-2 w-56 md:w-[350px] text-center font-bold rounded-full my-2 mb-0">Mrs. Summer Li </h3>
+                      <p className='text-xs text-black bg-blue-200 p-2 w-40 md:w-[300px] font-normal text-center'>Master of Science in Early Childhood Education CNVC  Certified trainer in China.<br/>Consultant for Child development projects .</p>
                   </div>
               </div>
           </div>
@@ -287,7 +287,7 @@ const AboutPage = () => {
       <div className="container mx-auto px-4 mb-4">
        <h3 className="text-2xl text-white p-4 my-2 font-extrabold my-8 text-center bg-blue-500">THE ADMINISTRATION COMMITEE</h3>
         <div className='flex justify-center mb-4'>
-              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-items-center justify-center gap-6'>
+              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-items-center justify-center gap-6'>
                   {/* <!-- First Column --> */}
                   <div className='flex flex-col items-center mx-4 mb-8'>
                     <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
@@ -303,6 +303,20 @@ const AboutPage = () => {
                     </div>
                       <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Mr. C.Canisharithan</h3>
                       <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>Finance and Logistics Manager</p>
+                  </div>
+                  <div className='flex flex-col items-center mx-4 mb-8'>
+                  <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
+                      <img src={'/about/maryan.png'} alt="Member" className='w-full h-full rounded-xl shadow-xl'/>
+                    </div>
+                      <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Mr. Mariyan Croos </h3>
+                      <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>Program Manager for Child and Livelihood Development</p>
+                  </div>
+                   <div className='flex flex-col items-center mx-4 mb-8'>
+                  <div className='w-28 h-32 shadow-xl rounded-xl overflow-hidden'>
+                      <img src={'/about/merin.png'} alt="Member" className='w-full h-full rounded-xl shadow-xl'/>
+                    </div>
+                      <h3 className="text-sm text-white bg-blue-500 p-2 w-[200px] text-center font-bold rounded-full my-2 mb-0">Mr. J.Merin Nitharsan </h3>
+                      <p className='text-xs text-black bg-blue-200 p-2 w-[150px] text-center font-normal'>Web Content & Digital Marketing Manager</p>
                   </div>
               </div>
           </div>

@@ -9,6 +9,10 @@ const Donate = () => {
     accName: false,
     accNo: false,
     swift: false,
+    bankName2: false,
+    accName2: false,
+    accNo2: false,
+    swift2: false,
   });
 
   const handleCopy = async (key, text) => {
@@ -32,43 +36,95 @@ const Donate = () => {
           <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">Bank Account Details for Donations</h3>
           <p className="text-center text-gray-600 mb-8">Please use the following bank details to make direct transfers. Click the copy button to copy the value.</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h4 className="text-xl font-semibold text-gray-800 mb-4">Hatton National Bank</h4>
+          <table className="w-full bg-white rounded-lg shadow overflow-hidden mb-8">
+            <tbody>
+              <tr className="border-b">
+                <td className="p-4 text-sm text-gray-500 font-medium">Bank Name</td>
+                <td className="p-4 text-lg font-medium text-gray-800">
+                  <div className="flex items-center justify-between">
+                    <span>Hatton National Bank PLC, Nananttan</span>
+                    <div className="flex items-center gap-3">
+                      <a href="bankacc2.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-sky-700 underline">View PDF</a>
+                      <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('bankName2', "Hatton National Bank")}>{copied.bankName2 ? 'Copied' : 'Copy'}</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="p-4 text-sm text-gray-500 font-medium">Account Name</td>
+                <td className="p-4 text-lg font-medium text-gray-800 uppercase">
+                  <div className="flex items-center justify-between">
+                    <span>INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION(IMSESO)</span>
+                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('accName2', 'Your Account Name')}>{copied.accName2 ? 'Copied' : 'Copy'}</button>
+                  </div>
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="p-4 text-sm text-gray-500 font-medium">Account Number</td>
+                <td className="p-4 text-lg font-medium text-gray-800">
+                  <div className="flex items-center justify-between">
+                    <span>172020101112</span>
+                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('accNo2', 'Your Account Number')}>{copied.accNo2 ? 'Copied' : 'Copy'}</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td className="p-4 text-sm text-gray-500 font-medium">SWIFT / BIC</td>
+                <td className="p-4 text-lg font-medium text-gray-800">
+                  <div className="flex items-center justify-between">
+                    <span>HBLILKLXXXX</span>
+                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('swift2', 'Your SWIFT Code')}>{copied.swift2 ? 'Copied' : 'Copy'}</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-            <div className="bg-white p-6 rounded-lg shadow">
-              <label className="block text-sm text-gray-500">Bank Name</label>
-              <div className="flex items-center justify-between mt-2">
-                <span id="bankName" className="text-lg font-medium text-gray-800">People's Bank, Murunkan</span>
-                <div className="flex items-center gap-3">
-                  <a href="bankacc.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-sky-700 underline">View PDF</a>
-                  <button className="ml-2 text-sm text-sky-700 flex items-center gap-2 cursor-pointer" onClick={() => handleCopy('bankName', "People's Bank, Murunkan")}>{copied.bankName ? 'Copied' : 'Copy'}</button>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow">
-              <label className="block text-sm text-gray-500">Account Name</label>
-              <div className="flex items-center justify-between mt-2">
-                <span id="accName" className="text-lg font-medium text-gray-800 uppercase">INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION</span>
-                <button className="ml-4 text-sm text-sky-700 flex items-center gap-2 cursor-pointer" onClick={() => handleCopy('accName', 'INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION')}>{copied.accName ? 'Copied' : 'Copy'}</button>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow">
-              <label className="block text-sm text-gray-500">Account Number</label>
-              <div className="flex items-center justify-between mt-2">
-                <span id="accNo" className="text-lg font-medium text-gray-800">166100100025532</span>
-                <button className="ml-4 text-sm text-sky-700 flex items-center gap-2 cursor-pointer" onClick={() => handleCopy('accNo', '166100100025532')}>{copied.accNo ? 'Copied' : 'Copy'}</button>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow">
-              <label className="block text-sm text-gray-500">SWIFT / BIC</label>
-              <div className="flex items-center justify-between mt-2">
-                <span id="swift" className="text-lg font-medium text-gray-800">PSBKLKLX</span>
-                <button className="ml-4 text-sm text-sky-700 flex items-center gap-2 cursor-pointer" onClick={() => handleCopy('swift', 'PSBKLKLX')}>{copied.swift ? 'Copied' : 'Copy'}</button>
-              </div>
-            </div>
-          </div>
+          <h4 className="text-xl font-semibold text-gray-800 mb-4">People's Bank</h4>
+          <table className="w-full bg-white rounded-lg shadow overflow-hidden">
+            <tbody>
+              <tr className="border-b">
+                <td className="p-4 text-sm text-gray-500 font-medium">Bank Name</td>
+                <td className="p-4 text-lg font-medium text-gray-800">
+                  <div className="flex items-center justify-between">
+                    <span>People's Bank, Murunkan</span>
+                    <div className="flex items-center gap-3">
+                      <a href="bankacc.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-sky-700 underline">View PDF</a>
+                      <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('bankName', "People's Bank, Murunkan")}>{copied.bankName ? 'Copied' : 'Copy'}</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="p-4 text-sm text-gray-500 font-medium">Account Name</td>
+                <td className="p-4 text-lg font-medium text-gray-800 uppercase">
+                  <div className="flex items-center justify-between">
+                    <span>INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION</span>
+                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('accName', 'INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION')}>{copied.accName ? 'Copied' : 'Copy'}</button>
+                  </div>
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="p-4 text-sm text-gray-500 font-medium">Account Number</td>
+                <td className="p-4 text-lg font-medium text-gray-800">
+                  <div className="flex items-center justify-between">
+                    <span>166100100025532</span>
+                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('accNo', '166100100025532')}>{copied.accNo ? 'Copied' : 'Copy'}</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td className="p-4 text-sm text-gray-500 font-medium">SWIFT / BIC</td>
+                <td className="p-4 text-lg font-medium text-gray-800">
+                  <div className="flex items-center justify-between">
+                    <span>PSBKLKLX</span>
+                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('swift', 'PSBKLKLX')}>{copied.swift ? 'Copied' : 'Copy'}</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <p className="text-sm text-gray-600 mt-6">After making the transfer, please email the transaction receipt to <strong>imseso2013@gmail.com</strong> with donor name and contact details so we can acknowledge your gift.</p>
         </div>

@@ -104,16 +104,17 @@ const HomePage = () => {
       </div>
      </div>
       {/* Second Section: Other Components */}
-      <div className="flex flex-col items-center mb-2 mt-6 bg-blue-200 p-6">
-        <h1 className="text-3xl font-extrabold text-blue-500 mb-8 head-oswald">Our Partner Organizations</h1>
-        <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+      <div className="flex flex-col items-center mb-2 mt-6 bg-blue-200 p-4 md:p-8">
+        <h1 className="text-3xl font-extrabold text-blue-500 mb-6 md:mb-8 head-oswald">Our Partner Organizations</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-6xl">
+          <div className="bg-white shadow-md rounded-lg p-4 md:p-6 text-center hover:shadow-lg transition-shadow">
             <div className="flex justify-center">
             </div>
             <h3 className="text-xl font-extrabold text-gray-800 head-oswald">Interplast UK (Charity) </h3>
             <div className="mt-4">
             <div className="text-gray-800">
-              <div className="mb-2 w-100 sm:w-auto md:w-200">
-                <p className="head-oswald">
+              <div className="mb-2 w-full">
+                <p className="head-oswald text-left leading-relaxed break-words">
                   Interplast UK is an International Organization of Plastic Surgeons and associated
                    professionals who provide free reconstructive surgery for underprivileged patients
                    in the developing world. Dr.Charles Viva is Co-Founder and Head of the Organization.
@@ -122,6 +123,28 @@ const HomePage = () => {
             </div>
           </div>
           </div>
+          <div className="bg-white shadow-md rounded-lg p-4 md:p-6 text-center hover:shadow-lg transition-shadow">
+            <div className="flex justify-center">
+            </div>
+            <h3 className="text-xl font-extrabold text-gray-800 head-oswald">Foundation for Social Dialogue</h3>
+            <div className="mt-4">
+            <div className="text-gray-800">
+              <div className="mb-2 w-full">
+                <p className="head-oswald text-left leading-relaxed break-words">
+                  The Foundation for Social Dialogue promotes Marshall B. Rosenberg's Nonviolent Communication, a transformative approach that fosters empathy, understanding, and peaceful conflict resolution in communities worldwide.
+                </p>
+              </div>
+            </div>
+            <div className="text-left mt-2">
+              <a href="https://nvcfundacjazyrafy.pl" target="_blank" rel="noopener noreferrer">
+                <button className="group bg-blue-500 text-white px-2 md:px-4 py-1 md:py-2 rounded-full font-bold transition delay-150 body-oswald duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-sky-600">
+                  <p className="text-sm md:text-lg">Go to Website <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span></p>
+                </button>
+              </a>
+            </div>
+          </div>
+          </div>
+        </div>
       </div>
 
       {/* Footer */}

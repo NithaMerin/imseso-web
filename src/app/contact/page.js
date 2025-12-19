@@ -51,11 +51,11 @@ export default function page() {
             <h3 className="text-xl font-semibold text-gray-800">Visit us</h3>
             <div className="mt-4">
             <div className="text-gray-800">
-              <div className="mb-2">
-                <strong>Negombo Address:</strong> Don Bosco Technical Centre, Don Bosco Mawatha, Ethukala, Negombo, Sri Lanka.
+               <div className="mb-2">
+                <strong>Official Address:</strong> Alavakai, Murunkan, Mannar District, Postal Code :41000, Northern Province, Sri Lanka.
               </div>
               <div>
-                <strong>Mannar Address:</strong> Alavakai, Murunkan, Mannar, Sri Lanka.
+                <strong>Negombo Address:</strong> Don Bosco Technical Centre, Don Bosco Mawatha, Ethukala, Negombo, Sri Lanka.
               </div>
             </div>
           </div>

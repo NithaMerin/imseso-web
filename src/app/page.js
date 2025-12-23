@@ -24,7 +24,7 @@ const HomePage = () => {
             </h1>
             </div>
             <Link href="/donate">
-              <button className="bg-blue-500 text-white px-3 md:px-6 py-2 md:py-4 mt-4 rounded-full font-bold transition delay-150 body-oswald duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-sky-600">
+              <button className="bg-blue-500 text-white px-3 md:px-6 py-2 md:py-4 mt-4 rounded-full font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-sky-600">
                <p className="text-m md:text-xl">Read More</p>
               </button>
             </Link>
@@ -59,6 +59,158 @@ const HomePage = () => {
           ))}
         </Carousel>
       </div>
+
+      {/* New Section: Sri Lanka Flood Relief */}
+      <div className="w-full max-w-6xl mt-8 px-4 md:px-0">
+        <h2 className="text-2xl md:text-5xl font-extrabold text-blue-500 text-center head-oswald mb-6">
+          Holding Each Other Through Hard Times: <br/>Sri Lanka Flood Relief
+        </h2>
+        <h3 className="text-xl md:text-2xl font-bold text-gray-600 text-center head-oswald mb-6 italic">
+          Finding Strength in the Healing Power of Belonging
+        </h3>
+        <div className="flex justify-center mb-6">
+          <Link href="/donate">
+            <img
+              src="/Fundraiser.jpg" // Replace with actual image path
+              alt="Sri Lanka Flood Relief"
+              className="w-full max-w-2xl h-96 md:h-[28rem] object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+            />
+          </Link>
+        </div>
+        <div className="text-center">
+          <p className="text-gray-700 text-justify head-oswald leading-relaxed max-w-4xl mx-auto">
+            This fundraiser is more than a response to a natural disaster — it is an act of solidarity with people
+who have been cultivating NVC values ​​for years, often under challenging social and economic
+conditions. The Sri Lankan NVC community has been steadily growing, with practitioners working
+in schools, interfaith dialogue, mental health, community peacebuilding, and youth development.
+Now, many of these same people are directly affected by the floods.
+<br /><br />
+We are collaborating with a local Sri Lankan NGO that works on the ground in coordination with
+local authorities to deliver essential supplies, especially in Mannar and  Nuwara Eliya and other
+severely affected areas. All funds will go directly to flood relief and support for the families affected.
+<br /><br />
+<strong>Why this matters</strong><br />
+This is not only a fundraiser it is a call to collective care. The people we are supporting are Sri
+Lankan citizens, and individuals who live NVC as a daily practice and who have, for years,
+contributed to their communities through nonviolence, reconciliation, trauma support, youth
+empowerment, and social transformation. Many continue their service even in the midst of crisis.
+Your support helps ensure they can meet basic needs now — and continue their meaningful
+work in the future.
+<br /><br />
+<strong>Project summary</strong><br />
+Cyclone Ditwah caused widespread flooding and landslides across multiple districts in Sri
+Lanka, severely disrupting school communities. Many students experienced displacement, loss
+of homes, interruption of education, and exposure to distressing events. These experiences have
+significantly increased psychological stress, anxiety, fear, and behavioral challenges among
+children. severely affecting districts such as Mannar, Batticaloa, Badulla, Nuwara Eliya Districts.
+<br /><br />
+<strong>Goal of the Project</strong><br />
+To strengthen the self-reliance of disaster-affected communities in four targeted districts by
+improving educational continuity, psychosocial wellbeing, peaceful community relations, youth
+leadership, sustainable livelihoods, and environmental protection.
+<br /><br />
+<strong>Specific Objectives</strong><br />
+• Providing clean water and heath services in the flood effed villages.<br />
+• Improve educational access and continuity for children affected by disasters.<br />
+• Provide psychosocial support and build emotional resilience among children, youth, and
+families.<br />
+• Promote Non-Violent Communication (NVC) and peaceful coexistence within
+communities.<br />
+• Strengthen youth leadership, employability, and civic engagement.<br />
+• Restore and diversify livelihoods for families affected by disasters.<br />
+• Promote environmental sustainability and community-based disaster risk reduction
+(DRR).
+          </p>
+        </div>
+        <div className="flex justify-start items-center gap-4 mt-6 max-w-4xl mx-auto">
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdQi3NIt-358qfuCy_PT6TK1fUEHv4EXzGs3Vudjm-ezSEtVg/viewform" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-sky-600 head-oswald"
+          >
+            Register Here
+          </a>
+          <a 
+            href="https://nvcfundacjazyrafy.pl/en/wydarzenie/holding-each-other-through-hard-times-sri-lanka-flood-relief/"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-gray-600 text-white px-6 py-3 rounded-full font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-700 head-oswald"
+          >
+            More Info
+          </a>
+        </div>
+        
+        {/* Video Section */}
+        <div className="mt-8 flex justify-center">
+          <div className="w-full max-w-4xl">
+            <div className="aspect-video bg-gray-200 rounded-lg shadow-lg overflow-hidden relative group cursor-pointer">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                preload="metadata"
+                autoPlay={false}
+                muted={false}
+                playsInline
+                id="flood-relief-video"
+                onLoadedData={() => {
+                  // Video is ready, ensure overlay is visible initially
+                  const overlay = document.querySelector('.video-overlay');
+                  if (overlay) overlay.style.display = 'flex';
+                }}
+                onPlay={() => {
+                  const overlay = document.querySelector('.video-overlay');
+                  const posterOverlay = document.querySelector('.poster-overlay');
+                  if (overlay) overlay.style.display = 'none';
+                  if (posterOverlay) posterOverlay.style.display = 'none';
+                }}
+                onPause={() => {
+                  const overlay = document.querySelector('.video-overlay');
+                  if (overlay) overlay.style.display = 'flex';
+                }}
+                onEnded={() => {
+                  const overlay = document.querySelector('.video-overlay');
+                  const posterOverlay = document.querySelector('.poster-overlay');
+                  if (overlay) overlay.style.display = 'flex';
+                  if (posterOverlay) posterOverlay.style.display = 'flex';
+                }}
+              >
+                <source src="/gallery/Imseso.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {/* Poster Overlay - shown initially */}
+              <div className="poster-overlay absolute inset-0 bg-black flex items-center justify-center">
+                <img
+                  src="/gallery/video-thumbnail.jpg"
+                  alt="Video thumbnail"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Custom Play Button Overlay */}
+              <div 
+                className="video-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 z-10"
+                onClick={() => {
+                  const video = document.getElementById('flood-relief-video');
+                  const posterOverlay = document.querySelector('.poster-overlay');
+                  if (video) {
+                    video.play();
+                  }
+                  if (posterOverlay) {
+                    posterOverlay.style.display = 'none';
+                  }
+                }}
+              >
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-sky-500 rounded-full flex items-center justify-center shadow-lg hover:bg-sky-600 transition-colors duration-300">
+                  <svg className="w-6 h-6 md:w-8 md:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M8 5v10l8-5-8-5z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 px-4 md:px-0 w-full max-w-6xl">
        <Link href="/about">
         <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
@@ -121,8 +273,8 @@ const HomePage = () => {
             </div>
             <div className="text-left mt-2">
               <a href="https://nvcfundacjazyrafy.pl" target="_blank" rel="noopener noreferrer">
-                <button className="group bg-blue-500 text-white px-2 md:px-4 py-1 md:py-2 rounded-full font-bold transition delay-150 body-oswald duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-sky-600">
-                  <p className="text-sm md:text-lg">Go to Website <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span></p>
+                <button className="group bg-blue-500 text-white px-2 md:px-4 py-1 md:py-2 rounded-full font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-sky-600">
+                  <p className="text-sm md:text-m">Go to Website</p>
                 </button>
               </a>
             </div>

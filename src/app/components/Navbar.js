@@ -28,6 +28,7 @@ const Navbar = () => {
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About Us" },
+              { href: "/events-news", label: "Events & News" },
               { href: "/program", label: "Programs & Impact" },
               { href: "/contact", label: "Contact Us" },
             ].map(({ href, label }) => (
@@ -75,6 +76,7 @@ const Navbar = () => {
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About Us" },
+              { href: "/events-news", label: "Events & News" },
               { href: "/program", label: "Programs & Impact" },
               { href: "/contact", label: "Contact Us" },
             ].map(({ href, label }) => (

@@ -67,6 +67,9 @@ const EventsNewsPage = () => {
           <h2 className="text-3xl font-bold text-blue-600 head-oswald mb-6 text-center">
             Event Gallery
           </h2>
+          <h3 className="text-xl font-semibold text-gray-700 head-oswald mb-6 text-center">
+            Distributed Emergency Flood Relief Assistance and provided drinking water hyacinth in the severely Flood effected village in Mannar District, Sri Lanka.
+          </h3>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {galleryImages.map((image, index) => (
               <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">

@@ -1,184 +1,144 @@
 "use client";
 import React from "react";
 import {
-  FaTiktok,
   FaInstagram,
   FaFacebook,
-  FaYoutube,
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
 } from "react-icons/fa";
-import FooterTab from "../components/FooterTab"; 
-import "../text.css"
+import FooterTab from "../components/FooterTab";
 
 export default function page() {
   return (
-    <>
-    <section id="contact" className="py-16 bg-gray-100 ">
-      <div className="container lg:w-10/12 mx-auto text-center head-oswald">
-        <h2 className="text-4xl font-bold text-gray-900 font-extrabold ">A PROMISE WITH CONFIDENCE!</h2>
-        <p className="mt-4 text-lg text-gray-700 italic">
-        We are proud to be an organization you can trust, and we invite you to colobrate with us for sustainable development  of Sri Lanka.
-        </p>
-        <h3 className="text-4xl font-bold text-sky-700 mt-8">FIND US</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 px-4 md:px-0">
-          <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-            <div className="flex justify-center">
-              <div className="bg-white p-4 rounded-full mb-4">
-                <FaPhoneAlt className="text-blue-500 text-2xl" />
-              </div>
+    <div className='bg-blue-50 dark:bg-slate-900 min-h-screen text-slate-900 dark:text-slate-200 font-inter selection:bg-sky-500/30 transition-colors duration-300'>
+
+      {/* Header */}
+      <div className="relative py-20 bg-gradient-to-b from-blue-100 via-blue-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold font-oswald text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400 dark:from-sky-400 dark:to-blue-600 mb-4 animate-fade-up">
+            Get in Touch
+          </h1>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto italic">
+            "A Promise with Confidence!"
+          </p>
+          <div className="h-1 w-24 bg-sky-500 mx-auto rounded-full mt-8"></div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 max-w-6xl pb-24">
+
+        {/* Contact Info Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {/* Phone */}
+          <div className="glass-card p-8 rounded-2xl border border-white/10 text-center hover:bg-white/90 dark:hover:bg-white/5 transition duration-300 group">
+            <div className="w-16 h-16 bg-blue-100 dark:bg-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <FaPhoneAlt className="text-blue-500 dark:text-sky-400 text-2xl" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">Call us</h3>
-            <div className="mt-4">
-            <span className="text-gray-800">
-              <strong>Phone:</strong>
-              <div className="ml-2">
-                +94766722724<br />
-                +94778874221
-              </div>
-            </span>
-          </div>
+            <h3 className="text-xl font-bold font-oswald text-slate-900 dark:text-white mb-4">Call Us</h3>
+            <div className="text-slate-600 dark:text-slate-400 space-y-2 text-sm">
+              <p>+94 76 672 2724</p>
+              <p>+94 77 887 4221</p>
+              <p className="border-t border-gray-200 dark:border-white/10 pt-2 mt-2">General: +94 70 196 9149</p>
+            </div>
           </div>
 
-          {/* Card 2 - Visit Us */}
-          <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-            <div className="flex justify-center">
-              <div className="bg-white p-4 rounded-full mb-4">
-                <FaMapMarkerAlt className="text-red-500 text-2xl" />
-              </div>
+          {/* Visit */}
+          <div className="glass-card p-8 rounded-2xl border border-white/10 text-center hover:bg-white/90 dark:hover:bg-white/5 transition duration-300 group">
+            <div className="w-16 h-16 bg-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <FaMapMarkerAlt className="text-red-500 dark:text-red-400 text-2xl" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">Visit us</h3>
-            <div className="mt-4">
-            <div className="text-gray-800">
-               <div className="mb-2">
-                <strong>Official Address:</strong> Alavakai, Murunkan, Mannar District, Postal Code :41000, Northern Province, Sri Lanka.
+            <h3 className="text-xl font-bold font-oswald text-slate-900 dark:text-white mb-4">Visit Us</h3>
+            <div className="text-slate-600 dark:text-slate-400 space-y-4 text-sm">
+              <div>
+                <strong className="text-slate-800 dark:text-white block mb-1">Official Address:</strong>
+                Alavakai, Murunkan, Mannar District, 41000, Northern Province, Sri Lanka.
               </div>
               <div>
-                <strong>Negombo Address:</strong> Don Bosco Technical Centre, Don Bosco Mawatha, Ethukala, Negombo, Sri Lanka.
+                <strong className="text-slate-800 dark:text-white block mb-1">Negombo Address:</strong>
+                Don Bosco Technical Centre, Ethukala, Negombo, Sri Lanka.
               </div>
             </div>
-          </div>
           </div>
 
-          {/* Card 3 - Email Us */}
-          <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-            <div className="flex justify-center">
-              <div className="bg-white p-4 rounded-full mb-4">
-                <FaEnvelope className="text-green-600 text-2xl" />
-              </div>
+          {/* Email */}
+          <div className="glass-card p-8 rounded-2xl border border-white/10 text-center hover:bg-white/90 dark:hover:bg-white/5 transition duration-300 group">
+            <div className="w-16 h-16 bg-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <FaEnvelope className="text-green-600 dark:text-green-400 text-2xl" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">Email us</h3>
-            <div className="mt-4">
-              <span className="text-gray-800">
-                <strong>Email:</strong> imseso2013@gmail.com
-              </span>
-            </div>
+            <h3 className="text-xl font-bold font-oswald text-slate-900 dark:text-white mb-4">Email Us</h3>
+            <p className="text-slate-600 dark:text-slate-400">
+              imseso2013@gmail.com
+            </p>
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-12 items-stretch">
-          {/* Child 1 */}
-          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full flex flex-col">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-              Send Us a Message
-            </h3>
-            <form action="#" method="post" className="space-y-4 flex-grow">
+        {/* Form and Map */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Contact Form */}
+          <div className="glass-card p-8 rounded-2xl border border-white/10">
+            <h3 className="text-2xl font-bold font-oswald text-slate-900 dark:text-white mb-6">Send a Message</h3>
+            <form className="space-y-6">
               <div>
+                <label className="block text-slate-600 dark:text-slate-400 text-sm mb-2">Your Name</label>
                 <input
                   type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full bg-slate-50 dark:bg-slate-800/50 border border-gray-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 dark:focus:border-sky-500 transition-colors"
+                  placeholder="John Doe"
                 />
               </div>
               <div>
+                <label className="block text-slate-600 dark:text-slate-400 text-sm mb-2">Your Email</label>
                 <input
                   type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full bg-slate-50 dark:bg-slate-800/50 border border-gray-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 dark:focus:border-sky-500 transition-colors"
+                  placeholder="john@example.com"
                 />
               </div>
               <div>
+                <label className="block text-slate-600 dark:text-slate-400 text-sm mb-2">Message</label>
                 <textarea
-                  name="message"
                   rows="4"
-                  placeholder="Your Message"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full bg-slate-50 dark:bg-slate-800/50 border border-gray-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 dark:focus:border-sky-500 transition-colors"
+                  placeholder="How can we help?"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors body-oswald"
-              >
+              <button className="w-full bg-blue-500 hover:bg-blue-600 dark:bg-sky-500 dark:hover:bg-sky-600 text-white font-bold py-3 rounded-lg transition-transform transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-sky-500/30">
                 Send Message
               </button>
             </form>
           </div>
 
-          {/* Child 2 */}
-          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full flex">
-            <div style={{ width: "100%", maxWidth: "600px", margin: "0 auto" }}>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.543106602742!2d79.9910374702688!3d8.833739272636027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afdcfc4d8ebb12f%3A0x958e38bddfc5f113!2sIMSESO%20-%20Inclusive%20Management%20%26%20Social%20Empowering%20Security%20Organisation!5e1!3m2!1sen!2slk!4v1739955876251!5m2!1sen!2slk"
-                width="100%"
-                height="100%"
-                style={{ border: "0" }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+          {/* Map */}
+          <div className="glass-card p-2 rounded-2xl border border-white/10 h-[500px] lg:h-auto overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.543106602742!2d79.9910374702688!3d8.833739272636027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afdcfc4d8ebb12f%3A0x958e38bddfc5f113!2sIMSESO%20-%20Inclusive%20Management%20%26%20Social%20Empowering%20Security%20Organisation!5e1!3m2!1sen!2slk!4v1739955876251!5m2!1sen!2slk"
+              width="100%"
+              height="100%"
+              style={{ border: "0", borderRadius: "10px" }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="grayscale hover:grayscale-0 transition-all duration-700"
+            ></iframe>
           </div>
         </div>
 
-        <div className="mt-12">
-          <h3 className="text-2xl font-semibold text-gray-800">Follow Us</h3>
-          <div className="mt-6 flex space-x-6 justify-center">
-            {/* <a
-              href="https://www.tiktok.com/@gideon_ingermany?_t=8qm4y7odswq&_r=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-500 transition-colors"
-            >
-              <FaTiktok className="w-8 h-8" />
-            </a> */}
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/imseso2015"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-pink-500 transition-colors"
-            >
-              <FaInstagram className="w-8 h-8" />
+        {/* Social Links */}
+        <div className="mt-16 text-center">
+          <h3 className="text-xl font-bold font-oswald text-slate-900 dark:text-white mb-6">Follow Us On Social Media</h3>
+          <div className="flex justify-center space-x-6">
+            <a href="https://www.instagram.com/imseso2015" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-pink-600 dark:hover:text-pink-500 hover:scale-110 transition border border-white/10">
+              <FaInstagram className="text-2xl" />
             </a>
-            {/* Facebook */}
-            <a
-              href="https://www.facebook.com/imseso.jesus"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-700 transition-colors"
-            >
-              <FaFacebook className="w-8 h-8" />
+            <a href="https://www.facebook.com/imseso.jesus" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-500 hover:scale-110 transition border border-white/10">
+              <FaFacebook className="text-2xl" />
             </a>
-            {/* YouTube */}
-            {/* <a
-              href="https://youtube.com/@gidzunipath?si=WoGKw0TkY3Aj0Ar-"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-red-500 transition-colors"
-            >
-              <FaYoutube className="w-8 h-8" />
-            </a> */}
           </div>
         </div>
+
       </div>
-    </section>
-    <FooterTab />
-    </>
+      <FooterTab />
+    </div>
   );
 }

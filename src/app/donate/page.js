@@ -4,24 +4,7 @@ import Link from 'next/link';
 import FooterTab from '../components/FooterTab';
 
 const Donate = () => {
-  const [copied, setCopied] = useState({
-    bankName: false,
-    accName: false,
-    accNo: false,
-    swift: false,
-    bankNameHatton: false,
-    accName2: false,
-    accNo2: false,
-    swift2: false,
-    bankAddressHatton: false,
-    orgAddressHatton: false,
-    regNumberHatton: false,
-    postalCodeHatton: false,
-    bankCodeHatton: false,
-    branchCodeHatton: false,
-    bankPostalCodeHatton: false,
-    orgNameHatton: false,
-  });
+  const [copied, setCopied] = useState({});
 
   const handleCopy = async (key, text) => {
     try {
@@ -35,218 +18,122 @@ const Donate = () => {
     }
   };
 
+  const AccountCard = ({ bankName, details, pdfLink }) => (
+    <div className="glass-card rounded-2xl border border-white/10 overflow-hidden hover:bg-white/90 dark:hover:bg-white/5 transition duration-300">
+      <div className="bg-blue-100/50 dark:bg-sky-600/20 p-4 border-b border-white/10 flex justify-between items-center">
+        <h3 className="text-xl font-bold font-oswald text-blue-600 dark:text-sky-400">{bankName}</h3>
+        {pdfLink && (
+          <a href={pdfLink} target="_blank" rel="noopener noreferrer" className="text-xs bg-blue-600 hover:bg-blue-500 dark:bg-sky-600 dark:hover:bg-sky-500 text-white px-3 py-1 rounded transition">
+            View PDF
+          </a>
+        )}
+      </div>
+      <div className="p-6 space-y-4">
+        {details.map((detail, idx) => (
+          <div key={idx} className="flex flex-col sm:flex-row justify-between sm:items-center gap-2 pb-3 border-b border-gray-200 dark:border-white/5 last:border-0 last:pb-0">
+            <span className="text-slate-500 dark:text-slate-400 text-sm font-medium">{detail.label}</span>
+            <div className="flex items-center gap-3">
+              <span className="text-slate-800 dark:text-white font-medium text-right break-all">{detail.value}</span>
+              <button
+                onClick={() => handleCopy(detail.key, detail.value)}
+                className={`p-1.5 rounded transition-colors ${copied[detail.key] ? 'bg-green-500/20 text-green-600 dark:text-green-400' : 'bg-slate-200 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-sky-600 text-slate-500 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white'}`}
+                title="Copy to clipboard"
+              >
+                {copied[detail.key] ? (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                ) : (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                )}
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
-    <div className="relative min-h-screen">
+    <div className='bg-blue-50 dark:bg-slate-900 min-h-screen text-slate-900 dark:text-slate-200 font-inter selection:bg-sky-500/30 transition-colors duration-300'>
 
-      {/* Bank Details Section */}
-      <div className="bg-sky-50 py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">Bank Account Details for Donations</h3>
-          <p className="text-center text-gray-600 mb-8">Please use the following bank details to make direct transfers. Click the copy button to copy the value.</p>
-
-          <h4 className="text-xl font-semibold text-gray-800 mb-4">Hatton National Bank</h4>
-          <table className="w-full bg-white rounded-lg shadow overflow-hidden mb-8">
-            <tbody>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Bank Name</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>Hatton National Bank PLC, Nananttan</span>
-                    <div className="flex items-center gap-3">
-                      <a href="bankacc2.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-sky-700 underline">View PDF</a>
-                      <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('bankNameHatton', 'Hatton National Bank PLC, Nananttan')}>{copied.bankNameHatton ? 'Copied' : 'Copy'}</button>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Account Name</td>
-                <td className="p-4 text-lg font-medium text-gray-800 uppercase">
-                  <div className="flex items-center justify-between">
-                    <span>INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANIZATION(IMSESO)</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('accName2', 'INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION(IMSESO)')}>{copied.accName2 ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Account Number</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>172020101112</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('accNo2', '172020101112')}>{copied.accNo2 ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className="p-4 text-sm text-gray-500 font-medium">SWIFT / BIC</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>HBLILKLXXXX</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('swift2', 'HBLILKLXXXX')}>{copied.swift2 ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Bank Code</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>7083</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('bankCodeHatton', '7083')}>{copied.bankCodeHatton ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Branch Code</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>172</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('branchCodeHatton', '172')}>{copied.branchCodeHatton ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Bank Address</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>Uyilankulam Road, Nanattan, Mannar District, Northern Province, Sri Lanka</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('bankAddressHatton', 'Uyilankulam, Nanattan, Mannar, Northern Province, Sri Lanka')}>{copied.bankAddressHatton ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Bank Postal Code</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>01000</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('bankPostalCodeHatton', '01000')}>{copied.bankPostalCodeHatton ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Organization Name</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>IMSESO (Inclusive Management and Social Empowering Security Organization)</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('orgNameHatton', 'IMSESO (Inclusive Management and Social Empowering Security Organization)')}>{copied.orgNameHatton ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Organization Address</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>Alavakkai, Murunkan, Mannar, Northern Province, Sri Lanka.</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('orgAddressHatton', 'Alavakkai, Murunkan, Mannar, Northern Province, Sri Lanka.')}>{copied.orgAddressHatton ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Registration Number</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>L - 176804</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('regNumberHatton', 'L - 176804')}>{copied.regNumberHatton ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Organization Postal Code</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>41000</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('postalCodeHatton', '41000')}>{copied.postalCodeHatton ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h4 className="text-xl font-semibold text-gray-800 mb-4">People's Bank</h4>
-          <table className="w-full bg-white rounded-lg shadow overflow-hidden">
-            <tbody>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Bank Name</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>People's Bank, Murunkan</span>
-                    <div className="flex items-center gap-3">
-                      <a href="bankacc.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-sky-700 underline">View PDF</a>
-                      <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('bankName', "People's Bank, Murunkan")}>{copied.bankName ? 'Copied' : 'Copy'}</button>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Account Name</td>
-                <td className="p-4 text-lg font-medium text-gray-800 uppercase">
-                  <div className="flex items-center justify-between">
-                    <span>INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('accName', 'INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION')}>{copied.accName ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="p-4 text-sm text-gray-500 font-medium">Account Number</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>166100100025532</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('accNo', '166100100025532')}>{copied.accNo ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className="p-4 text-sm text-gray-500 font-medium">SWIFT / BIC</td>
-                <td className="p-4 text-lg font-medium text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>PSBKLKLX</span>
-                    <button className="text-sm text-sky-700 cursor-pointer" onClick={() => handleCopy('swift', 'PSBKLKLX')}>{copied.swift ? 'Copied' : 'Copy'}</button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p className="text-sm text-gray-600 mt-6">After making the transfer, please email the transaction receipt to <strong>imseso2013@gmail.com</strong> with donor name and contact details so we can acknowledge your gift.</p>
+      {/* Header */}
+      <div className="relative py-20 bg-gradient-to-b from-blue-100 via-blue-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold font-oswald text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400 dark:from-sky-400 dark:to-blue-600 mb-4 animate-fade-up">
+            Donate Now
+          </h1>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Your contribution can transform the lives of children and communities in Sri Lanka.
+          </p>
+          <div className="h-1 w-24 bg-sky-500 mx-auto rounded-full mt-8"></div>
         </div>
       </div>
-      {/* Donation content */}
-      <div className="relative z-10 bg-white py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
+
+      <div className="container mx-auto px-4 max-w-5xl mb-24">
+
+        {/* Introduction */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl font-bold font-oswald text-slate-900 dark:text-white mb-6">
             Join our journey to give children a sustainable future
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            There are several ways in which you can contribute to transform lives of our younger generation.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Inclusive Youth Empowerment & Entrepreneurship */}
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-                Inclusive Youth Empowerment & Entrepreneurship
-              </h3>
-              <p className="text-lg text-gray-600">
-                Building disabled youth resilience and autonomy by promoting entrepreneurship activities, providing necessary skills, mentorship, and helping them secure credit facilities.
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="glass-card p-6 rounded-xl border border-white/10 text-left">
+              <h3 className="text-lg font-bold text-blue-600 dark:text-sky-400 mb-2">Inclusive Youth Empowerment</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                Building resilience by promoting entrepreneurship, skills, mentorship, and credit facilities.
               </p>
             </div>
-
-            {/* Water and Sanitation */}
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-                Water and Sanitation
-              </h3>
-              <p className="text-lg text-gray-600">
+            <div className="glass-card p-6 rounded-xl border border-white/10 text-left">
+              <h3 className="text-lg font-bold text-blue-600 dark:text-sky-400 mb-2">Water and Sanitation</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
                 Ensuring access to clean water and sanitation facilities for children and their communities.
               </p>
             </div>
           </div>
         </div>
+
+        {/* Bank Details */}
+        <div className="space-y-12">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Direct Bank Transfer</h3>
+            <p className="text-slate-600 dark:text-slate-400 text-sm">Use the copy details button for easy transfer.</p>
+          </div>
+
+          {/* Account Cards are rendered here - handled by helper component updates */}
+
+          <AccountCard
+            bankName="Hatton National Bank"
+            pdfLink="bankacc2.pdf"
+            details={[
+              { label: "Bank Name", value: "Hatton National Bank PLC, Nananttan", key: "bankNameHatton" },
+              { label: "Account Name", value: "INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION(IMSESO)", key: "accNameHatton" },
+              { label: "Account Number", value: "172020101112", key: "accNoHatton" },
+              { label: "SWIFT / BIC", value: "HBLILKLXXXX", key: "swiftHatton" },
+              { label: "Bank Address", value: "Uyilankulam Road, Nanattan", key: "bankAddrHatton" },
+              { label: "Postal Code", value: "41000", key: "postalCodeHatton" },
+            ]}
+          />
+
+          <AccountCard
+            bankName="People's Bank"
+            pdfLink="bankacc.pdf"
+            details={[
+              { label: "Bank Name", value: "People's Bank, Murunkan", key: "bankNamePeoples" },
+              { label: "Account Name", value: "INCLUSIVE MANAGEMENT AND SOCIAL EMPOWERING SECURITY ORGANISATION", key: "accNamePeoples" },
+              { label: "Account Number", value: "166100100025532", key: "accNoPeoples" },
+              { label: "SWIFT / BIC", value: "PSBKLKLX", key: "swiftPeoples" },
+            ]}
+          />
+
+          <div className="mt-8 p-4 bg-blue-100/50 dark:bg-sky-900/20 border border-blue-200 dark:border-sky-500/20 rounded-lg text-center">
+            <p className="text-slate-700 dark:text-sky-300 text-sm">
+              After making the transfer, please email the transaction receipt to <strong className="text-blue-700 dark:text-white">imseso2013@gmail.com</strong> with donor name and contact details so we can acknowledge your gift.
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Footer */}
       <FooterTab />
     </div>
   );
 };
-
 export default Donate;

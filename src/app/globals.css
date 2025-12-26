@@ -2,21 +2,91 @@
 
 /* Custom CSS */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  /* Lighter, cooler gray background */
+  --foreground: #1e293b;
+  /* Slate 800 for better contrast text */
+  --font-oswald: 'Oswald', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    /* Slate 900 */
+    --foreground: #f1f5f9;
+    /* Slate 100 */
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.head-oswald {
+  font-family: var(--font-oswald);
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light Mode Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Light border */
+  color: #1e293b;
+  /* Slate 800 */
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Glass Card */
+.dark .glass-card {
+  background: rgba(5, 5, 5, 0.9);
+  /* Almost opaque black */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  /* FORCE WHITE TEXT */
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.dark .glass-card:hover {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  /* Sky blue border */
 }
 
 /* Add this to your globals.css or a custom CSS file */
@@ -26,60 +96,53 @@ body {
   height: 100%;
 }
 
-/* Ensure carousel images behave consistently across browsers (including Safari) */
-.carousel .slide img,
-.carousel img,
-.react-responsive-carousel .slide img {
-  width: 100%;
-  height: 420px; /* fixed height for consistent scaling; overridden by responsive classes */
-  object-fit: cover;
-  -webkit-object-fit: cover; /* Safari */
-  display: block;
-}
-
 .outline-text {
   -webkit-text-stroke: 0.4px black;
 }
 
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-10%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(10%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.animate-slide-in-left {
-  animation: slideInLeft 1s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 1s ease-out forwards;
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
+/* Global Animations */
+@keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
+
   to {
     opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }

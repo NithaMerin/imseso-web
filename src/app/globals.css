@@ -2,22 +2,14 @@
 
 /* Custom CSS */
 :root {
-  --background: #f8fafc;
-  /* Lighter, cooler gray background */
-  --foreground: #1e293b;
-  /* Slate 800 for better contrast text */
+  --background: #0f172a;
+  /* Slate 900 */
+  --foreground: #f1f5f9;
+  /* Slate 100 */
   --font-oswald: 'Oswald', sans-serif;
   --font-inter: 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    /* Slate 900 */
-    --foreground: #f1f5f9;
-    /* Slate 100 */
-  }
-}
 
 body {
   color: var(--foreground);

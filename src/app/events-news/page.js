@@ -145,7 +145,7 @@ const EventsNewsPage = () => {
         <section>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-oswald mb-4">
-              Event Gallery
+              Events Gallery
             </h2>
             <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto italic border-l-2 border-blue-500 dark:border-sky-500 pl-4 py-2 bg-white/50 dark:bg-white/5 rounded-r-lg">
               “Distributed Emergency Flood Relief Assistance and provided drinking water in the severely Flood effected village in Mannar District, Sri Lanka.”

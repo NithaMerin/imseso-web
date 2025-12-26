@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -26,14 +25,19 @@ const Navbar = () => {
         }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4">
-        <Link href="/" className="flex items-center group">
-          <div className="relative overflow-hidden rounded-full border-2 border-white/20 shadow-lg transition-transform duration-300 group-hover:scale-105">
-            <img src={'/imlogo.png'} alt="IMSESO Logo" className="h-10 w-10 md:h-12 md:w-12 bg-white object-contain" />
+        <div className="flex items-center gap-4">
+          <Link href="/" className="flex items-center group">
+            <div className="relative overflow-hidden rounded-full border-2 border-white/20 shadow-lg transition-transform duration-300 group-hover:scale-105">
+              <img src={'/imlogo.png'} alt="IMSESO Logo" className="h-10 w-10 md:h-12 md:w-12 bg-white object-contain" />
+            </div>
+            <span className="text-white text-2xl md:text-3xl font-bold ml-3 tracking-wide head-oswald drop-shadow-md">
+              IMSESO
+            </span>
+          </Link>
+          <div className="hidden md:block">
+            {/* Theme Toggle Removed */}
           </div>
-          <span className="text-white text-2xl md:text-3xl font-bold ml-3 tracking-wide head-oswald drop-shadow-md">
-            IMSESO
-          </span>
-        </Link>
+        </div>
 
         {/* Desktop nav */}
         <div className="hidden md:flex md:items-center md:space-x-8">
@@ -109,7 +113,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="pt-2 flex justify-center">
-            <ThemeToggle />
+            {/* Theme Toggle Removed */}
           </div>
         </div>
       </div>

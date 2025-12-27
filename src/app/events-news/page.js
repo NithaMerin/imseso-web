@@ -93,15 +93,15 @@ const meeting = [
 
 const EventsNewsPage = () => {
   return (
-    <div className='bg-blue-50 dark:bg-slate-900 min-h-screen text-slate-900 dark:text-slate-200 font-inter selection:bg-sky-500/30 transition-colors duration-300'>
+    <div className='bg-slate-900 min-h-screen text-slate-200 font-inter selection:bg-sky-500/30 transition-colors duration-300'>
 
       {/* Header */}
       <div className="relative py-20 bg-gradient-to-b from-blue-100 via-blue-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold font-oswald text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400 dark:from-sky-400 dark:to-blue-600 mb-4 animate-fade-up">
+          <h1 className="text-5xl md:text-6xl font-bold font-oswald text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 mb-4 animate-fade-up">
             Events & News
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Stay updated with our latest initiatives, community stories, and impact.
           </p>
           <div className="h-1 w-24 bg-sky-500 mx-auto rounded-full mt-8"></div>
@@ -144,10 +144,10 @@ const EventsNewsPage = () => {
         {/* Gallery Section */}
         <section>
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-oswald mb-4">
+            <h2 className="text-3xl font-bold text-white font-oswald mb-4">
               Events Gallery
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto italic border-l-2 border-blue-500 dark:border-sky-500 pl-4 py-2 bg-white/50 dark:bg-white/5 rounded-r-lg">
+            <p className="text-slate-400 max-w-3xl mx-auto italic border-l-2 border-sky-500 pl-4 py-2 bg-white/5 rounded-r-lg">
               “Distributed Emergency Flood Relief Assistance and provided drinking water in the severely Flood effected village in Mannar District, Sri Lanka.”
             </p>
           </div>
@@ -174,10 +174,10 @@ const EventsNewsPage = () => {
         {/* Teachers Training Section */}
         <section className="mt-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-oswald mb-4">
+            <h2 className="text-3xl font-bold text-white font-oswald mb-4">
               Teachers Training
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto italic border-l-2 border-blue-500 dark:border-sky-500 pl-4 py-2 bg-white/50 dark:bg-white/5 rounded-r-lg">
+            <p className="text-slate-400 max-w-3xl mx-auto italic border-l-2 border-sky-500 pl-4 py-2 bg-white/5 rounded-r-lg">
               “Non-Violent Communication training for teachers”
             </p>
           </div>
@@ -204,10 +204,10 @@ const EventsNewsPage = () => {
         {/* Mental Health Awareness Section */}
         <section className="mt-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-oswald mb-4">
+            <h2 className="text-3xl font-bold text-white font-oswald mb-4">
               Student Mental Health
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto italic border-l-2 border-blue-500 dark:border-sky-500 pl-4 py-2 bg-white/50 dark:bg-white/5 rounded-r-lg">
+            <p className="text-slate-400 max-w-3xl mx-auto italic border-l-2 border-sky-500 pl-4 py-2 bg-white/5 rounded-r-lg">
               “Mental health awareness and Brain activation training for school students.”
             </p>
           </div>
@@ -234,10 +234,10 @@ const EventsNewsPage = () => {
         {/* Children Learning Program Section */}
         <section className="mt-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-oswald mb-4">
+            <h2 className="text-3xl font-bold text-white font-oswald mb-4">
               Child Skills Development
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto italic border-l-2 border-blue-500 dark:border-sky-500 pl-4 py-2 bg-white/50 dark:bg-white/5 rounded-r-lg">
+            <p className="text-slate-400 max-w-3xl mx-auto italic border-l-2 border-sky-500 pl-4 py-2 bg-white/5 rounded-r-lg">
               “After school Learning and Skills Development programme for children in remote villages and hill countries.”
             </p>
           </div>
@@ -264,10 +264,10 @@ const EventsNewsPage = () => {
         {/* Women Empowerment Section */}
         <section className="mt-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-oswald mb-4">
+            <h2 className="text-3xl font-bold text-white font-oswald mb-4">
               Women Empowerment
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto italic border-l-2 border-blue-500 dark:border-sky-500 pl-4 py-2 bg-white/50 dark:bg-white/5 rounded-r-lg">
+            <p className="text-slate-400 max-w-3xl mx-auto italic border-l-2 border-sky-500 pl-4 py-2 bg-white/5 rounded-r-lg">
               “Women Empowerment initiative discussion in Haputale, Badulla District.”
             </p>
           </div>
@@ -294,10 +294,10 @@ const EventsNewsPage = () => {
         {/* Projects Discussion Section */}
         <section className="mt-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-oswald mb-4">
+            <h2 className="text-3xl font-bold text-white font-oswald mb-4">
               Board Meeting with Donors
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto italic border-l-2 border-blue-500 dark:border-sky-500 pl-4 py-2 bg-white/50 dark:bg-white/5 rounded-r-lg">
+            <p className="text-slate-400 max-w-3xl mx-auto italic border-l-2 border-sky-500 pl-4 py-2 bg-white/5 rounded-r-lg">
               “Projects discussion meeting with Netherlands donors.”
             </p>
           </div>

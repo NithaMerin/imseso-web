@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-white/10 ${scrolled ? "glass-dark py-2 shadow-lg" : "bg-transparent py-4"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-white/10 ${scrolled ? "bg-slate-900/80 backdrop-blur-md py-2 shadow-lg" : "bg-transparent py-4"
         }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4">
@@ -52,7 +52,7 @@ const Navbar = () => {
               <li key={href}>
                 <Link
                   href={href}
-                  className={`relative pb-1 transition-colors duration-300 ${!mounted ? 'text-white' : (pathname === href ? 'text-sky-400' : 'text-white/90 hover:text-white')
+                  className={`relative pb-1 transition-colors duration-300 ${!mounted ? 'text-slate-400' : (pathname === href ? 'text-sky-400' : 'text-slate-400 hover:text-sky-300')
                     } group`}
                 >
                   {label}
@@ -76,7 +76,7 @@ const Navbar = () => {
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className="text-white p-2 focus:outline-none"
+            className="text-slate-400 p-2 focus:outline-none"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={open ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
@@ -99,7 +99,7 @@ const Navbar = () => {
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className={`text-xl font-medium ${!mounted ? 'text-white' : (pathname === href ? 'text-sky-400' : 'text-white hover:text-sky-200')
+              className={`text-xl font-medium ${!mounted ? 'text-slate-400' : (pathname === href ? 'text-sky-400' : 'text-slate-400 hover:text-sky-200')
                 }`}
             >
               {label}

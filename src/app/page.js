@@ -46,7 +46,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="relative bg-blue-50 dark:bg-slate-900 transition-colors duration-300">
+    <div className="relative bg-slate-900 transition-colors duration-300">
       {/* Hero Section */}
       <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden mb-12">
         {heroSlides.map((slide, index) => (
@@ -101,10 +101,10 @@ const HomePage = () => {
 
         {/* New Section: Sri Lanka Flood Relief */}
         <div className="w-full max-w-6xl mt-8 px-4 md:px-0">
-          <h2 className="text-2xl md:text-5xl font-extrabold text-blue-500 dark:text-sky-400 text-center head-oswald mb-6">
+          <h2 className="text-2xl md:text-5xl font-extrabold text-sky-400 text-center head-oswald mb-6">
             Holding Each Other Through Hard Times: <br />Sri Lanka Flood Relief
           </h2>
-          <h3 className="text-xl md:text-2xl font-bold text-slate-600 dark:text-slate-300 text-center head-oswald mb-6 italic">
+          <h3 className="text-xl md:text-2xl font-bold text-slate-300 text-center head-oswald mb-6 italic">
             Finding Strength in the Healing Power of Belonging
           </h3>
           <div className="flex justify-center mb-6">
@@ -117,7 +117,7 @@ const HomePage = () => {
             </Link>
           </div>
           <div className="text-center">
-            <p className="text-slate-700 dark:text-slate-300 text-justify head-oswald leading-relaxed max-w-4xl mx-auto">
+            <p className="text-slate-300 text-justify head-oswald leading-relaxed max-w-4xl mx-auto">
               This fundraiser is more than a response to a natural disaster — it is an act of solidarity with people
               who have been cultivating NVC values ​​for years, often under challenging social and economic
               conditions. The Sri Lankan NVC community has been steadily growing, with practitioners working
@@ -251,7 +251,7 @@ const HomePage = () => {
 
           {/* YouTube Videos Section */}
           <div className="mt-8">
-            <h3 className="text-xl md:text-2xl font-bold text-center text-blue-500 head-oswald mb-6">Related Videos</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-center text-sky-400 head-oswald mb-6">Related Videos</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="aspect-video bg-gray-200 rounded-lg shadow-lg overflow-hidden">
                 <iframe
@@ -311,14 +311,14 @@ const HomePage = () => {
       </div>
       {/* Second Section: Partner Organizations */}
       <div className="flex flex-col items-center mb-12 mt-12 px-4 md:px-0">
-        <h1 className="text-3xl md:text-5xl font-extrabold text-blue-900 dark:text-sky-400 mb-8 md:mb-12 head-oswald tracking-wide animate-fade-up">Our Partner Organizations</h1>
+        <h1 className="text-3xl md:text-5xl font-extrabold text-sky-400 mb-8 md:mb-12 head-oswald tracking-wide animate-fade-up">Our Partner Organizations</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
           {/* Card 1 */}
-          <div className="glass-card p-8 hover:bg-white/90 dark:hover:bg-slate-800 transition-all duration-300 group">
+          <div className="glass-card p-8 hover:bg-slate-800 transition-all duration-300 group">
             <div className="h-2 w-20 bg-blue-500 mb-6 rounded-full group-hover:w-32 transition-all duration-300"></div>
-            <h3 className="text-2xl font-bold text-slate-800 dark:text-white head-oswald mb-4">Foundation for Social Dialogue - Poland</h3>
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6 font-light">
+            <h3 className="text-2xl font-bold text-white head-oswald mb-4">Foundation for Social Dialogue - Poland</h3>
+            <p className="text-slate-300 leading-relaxed mb-6 font-light">
               The Foundation for Social Dialogue promotes Marshall B. Rosenberg's Nonviolent Communication, a transformative approach that fosters empathy, understanding, and peaceful conflict resolution in communities worldwide.
             </p>
             <a href="https://nvcfundacjazyrafy.pl" target="_blank" rel="noopener noreferrer">
@@ -330,13 +330,13 @@ const HomePage = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="glass-card p-8 hover:bg-white/90 dark:hover:bg-slate-800 transition-all duration-300 group">
+          <div className="glass-card p-8 hover:bg-slate-800 transition-all duration-300 group">
             <div className="h-2 w-20 bg-blue-500 mb-6 rounded-full group-hover:w-32 transition-all duration-300"></div>
-            <h3 className="text-2xl font-bold text-slate-800 dark:text-white head-oswald mb-4">Interplast UK (Charity)</h3>
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6 font-light">
+            <h3 className="text-2xl font-bold text-white head-oswald mb-4">Interplast UK (Charity)</h3>
+            <p className="text-slate-300 leading-relaxed mb-6 font-light">
               Interplast UK is an International Organization of Plastic Surgeons and associated professionals who provide free reconstructive surgery for underprivileged patients in the developing world. Dr. Charles Viva is Co-Founder.
             </p>
-            <button className="text-slate-400 dark:text-slate-500 cursor-default font-bold flex items-center space-x-2">
+            <button className="text-slate-500 cursor-default font-bold flex items-center space-x-2">
               <span>Partner</span>
             </button>
           </div>

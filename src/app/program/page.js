@@ -85,12 +85,12 @@ const ProgramPage = () => {
   ];
 
   return (
-    <div className='bg-blue-50 dark:bg-slate-900 min-h-screen text-slate-900 dark:text-slate-200 font-inter selection:bg-sky-500/30 transition-colors duration-300'>
+    <div className='bg-slate-900 min-h-screen text-slate-200 font-inter selection:bg-sky-500/30 transition-colors duration-300'>
 
       {/* Header */}
       <div className="relative py-20 bg-gradient-to-b from-blue-100 via-blue-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold font-oswald text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400 dark:from-sky-400 dark:to-blue-600 mb-4 animate-fade-up">
+          <h1 className="text-5xl md:text-6xl font-bold font-oswald text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 mb-4 animate-fade-up">
             Our Programs & Impact
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -112,8 +112,8 @@ const ProgramPage = () => {
                 onClick={() => toggleSection(section.id)}
                 className={`w-full px-8 py-6 text-left flex justify-between items-center transition-colors duration-300 outline-none`}
               >
-                <span className={`text-xl md:text-2xl font-bold font-oswald tracking-wide ${expandedSection === section.id ? 'text-blue-600 dark:text-sky-400' : 'text-slate-800 dark:text-slate-200'}`}>
-                  <span className="text-blue-400 dark:text-sky-500/50 mr-4">0{section.id}.</span>
+                <span className={`text-xl md:text-2xl font-bold font-oswald tracking-wide ${expandedSection === section.id ? 'text-sky-400' : 'text-slate-200'}`}>
+                  <span className="text-sky-500/50 mr-4">0{section.id}.</span>
                   {section.title}
                 </span>
                 <span className={`flex items-center justify-center w-10 h-10 rounded-full border border-slate-300 dark:border-white/20 transition-transform duration-300 ${expandedSection === section.id ? 'rotate-180 bg-blue-100 dark:bg-sky-500/20 text-blue-600 dark:text-sky-400' : 'text-slate-400'}`}>
@@ -130,7 +130,7 @@ const ProgramPage = () => {
                 <div className="p-8">
                   <div className="flex flex-col lg:flex-row gap-8">
                     <div className="lg:w-3/5">
-                      <div className="prose prose-invert prose-lg text-slate-700 dark:text-slate-300 leading-relaxed max-w-none">
+                      <div className="prose prose-invert prose-lg text-slate-300 leading-relaxed max-w-none">
                         {section.content.split('\n').map((paragraph, i) => (
                           <p key={i} className="mb-4 text-justify">{paragraph}</p>
                         ))}

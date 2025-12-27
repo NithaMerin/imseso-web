@@ -19,7 +19,7 @@ export default function page() {
           <h1 className="text-5xl md:text-6xl font-bold font-oswald text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400 dark:from-sky-400 dark:to-blue-600 mb-4 animate-fade-up">
             Get in Touch
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto italic">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto italic">
             "A Promise with Confidence!"
           </p>
           <div className="h-1 w-24 bg-sky-500 mx-auto rounded-full mt-8"></div>
@@ -32,30 +32,30 @@ export default function page() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {/* Phone */}
           <div className="glass-card p-8 rounded-2xl border border-white/10 text-center hover:bg-white/90 dark:hover:bg-white/5 transition duration-300 group">
-            <div className="w-16 h-16 bg-blue-100 dark:bg-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-              <FaPhoneAlt className="text-blue-500 dark:text-sky-400 text-2xl" />
+            <div className="w-16 h-16 bg-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <FaPhoneAlt className="text-sky-400 text-2xl" />
             </div>
-            <h3 className="text-xl font-bold font-oswald text-slate-900 dark:text-white mb-4">Call Us</h3>
-            <div className="text-slate-600 dark:text-slate-400 space-y-2 text-sm">
+            <h3 className="text-xl font-bold font-oswald text-white mb-4">Call Us</h3>
+            <div className="text-slate-400 space-y-2 text-sm">
               <p>+94 76 672 2724</p>
               <p>+94 77 887 4221</p>
-              <p className="border-t border-gray-200 dark:border-white/10 pt-2 mt-2">General: +94 70 196 9149</p>
+              <p className="border-t border-white/10 pt-2 mt-2">General: +94 70 196 9149</p>
             </div>
           </div>
 
           {/* Visit */}
           <div className="glass-card p-8 rounded-2xl border border-white/10 text-center hover:bg-white/90 dark:hover:bg-white/5 transition duration-300 group">
             <div className="w-16 h-16 bg-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-              <FaMapMarkerAlt className="text-red-500 dark:text-red-400 text-2xl" />
+              <FaMapMarkerAlt className="text-red-400 text-2xl" />
             </div>
-            <h3 className="text-xl font-bold font-oswald text-slate-900 dark:text-white mb-4">Visit Us</h3>
-            <div className="text-slate-600 dark:text-slate-400 space-y-4 text-sm">
+            <h3 className="text-xl font-bold font-oswald text-white mb-4">Visit Us</h3>
+            <div className="text-slate-400 space-y-4 text-sm">
               <div>
-                <strong className="text-slate-800 dark:text-white block mb-1">Official Address:</strong>
+                <strong className="text-white block mb-1">Official Address:</strong>
                 Alavakai, Murunkan, Mannar District, 41000, Northern Province, Sri Lanka.
               </div>
               <div>
-                <strong className="text-slate-800 dark:text-white block mb-1">Negombo Address:</strong>
+                <strong className="text-white block mb-1">Negombo Address:</strong>
                 Don Bosco Technical Centre, Ethukala, Negombo, Sri Lanka.
               </div>
             </div>
@@ -64,10 +64,10 @@ export default function page() {
           {/* Email */}
           <div className="glass-card p-8 rounded-2xl border border-white/10 text-center hover:bg-white/90 dark:hover:bg-white/5 transition duration-300 group">
             <div className="w-16 h-16 bg-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-              <FaEnvelope className="text-green-600 dark:text-green-400 text-2xl" />
+              <FaEnvelope className="text-green-400 text-2xl" />
             </div>
-            <h3 className="text-xl font-bold font-oswald text-slate-900 dark:text-white mb-4">Email Us</h3>
-            <p className="text-slate-600 dark:text-slate-400">
+            <h3 className="text-xl font-bold font-oswald text-white mb-4">Email Us</h3>
+            <p className="text-slate-400">
               imseso2013@gmail.com
             </p>
           </div>
@@ -77,33 +77,33 @@ export default function page() {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Form */}
           <div className="glass-card p-8 rounded-2xl border border-white/10">
-            <h3 className="text-2xl font-bold font-oswald text-slate-900 dark:text-white mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold font-oswald text-white mb-6">Send a Message</h3>
             <form className="space-y-6">
               <div>
-                <label className="block text-slate-600 dark:text-slate-400 text-sm mb-2">Your Name</label>
+                <label className="block text-slate-400 text-sm mb-2">Your Name</label>
                 <input
                   type="text"
-                  className="w-full bg-slate-50 dark:bg-slate-800/50 border border-gray-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 dark:focus:border-sky-500 transition-colors"
+                  className="w-full bg-slate-800/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition-colors"
                   placeholder="John Doe"
                 />
               </div>
               <div>
-                <label className="block text-slate-600 dark:text-slate-400 text-sm mb-2">Your Email</label>
+                <label className="block text-slate-400 text-sm mb-2">Your Email</label>
                 <input
                   type="email"
-                  className="w-full bg-slate-50 dark:bg-slate-800/50 border border-gray-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 dark:focus:border-sky-500 transition-colors"
+                  className="w-full bg-slate-800/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition-colors"
                   placeholder="john@example.com"
                 />
               </div>
               <div>
-                <label className="block text-slate-600 dark:text-slate-400 text-sm mb-2">Message</label>
+                <label className="block text-slate-400 text-sm mb-2">Message</label>
                 <textarea
                   rows="4"
-                  className="w-full bg-slate-50 dark:bg-slate-800/50 border border-gray-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 dark:focus:border-sky-500 transition-colors"
+                  className="w-full bg-slate-800/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition-colors"
                   placeholder="How can we help?"
                 ></textarea>
               </div>
-              <button className="w-full bg-blue-500 hover:bg-blue-600 dark:bg-sky-500 dark:hover:bg-sky-600 text-white font-bold py-3 rounded-lg transition-transform transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-sky-500/30">
+              <button className="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 rounded-lg transition-transform transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-sky-500/30">
                 Send Message
               </button>
             </form>
@@ -126,12 +126,12 @@ export default function page() {
 
         {/* Social Links */}
         <div className="mt-16 text-center">
-          <h3 className="text-xl font-bold font-oswald text-slate-900 dark:text-white mb-6">Follow Us On Social Media</h3>
+          <h3 className="text-xl font-bold font-oswald text-white mb-6">Follow Us On Social Media</h3>
           <div className="flex justify-center space-x-6">
-            <a href="https://www.instagram.com/imseso2015" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-pink-600 dark:hover:text-pink-500 hover:scale-110 transition border border-white/10">
+            <a href="https://www.instagram.com/imseso2015" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-pink-500 hover:scale-110 transition border border-white/10">
               <FaInstagram className="text-2xl" />
             </a>
-            <a href="https://www.facebook.com/imseso.jesus" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-500 hover:scale-110 transition border border-white/10">
+            <a href="https://www.facebook.com/imseso.jesus" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-blue-500 hover:scale-110 transition border border-white/10">
               <FaFacebook className="text-2xl" />
             </a>
           </div>

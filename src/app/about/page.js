@@ -130,6 +130,20 @@ const AboutPage = () => {
       <div className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-bold font-oswald text-center text-white mb-16">Our Dedicated Team</h2>
 
+        {/* Head of the Organization */}
+        <div className="mb-20">
+          <h3 className="text-xl font-bold text-blue-600 dark:text-sky-400 uppercase tracking-widest text-center mb-8 border-b border-gray-300 dark:border-white/10 pb-4 inline-block w-full">Head of the Organization</h3>
+          <div className="flex flex-col items-center">
+            <div className="glass-card p-8 rounded-2xl border border-blue-500/30 dark:border-sky-500/30 text-center relative overflow-hidden bg-gradient-to-b from-blue-100/50 via-transparent to-transparent dark:from-sky-900/20 max-w-sm w-full">
+              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 dark:border-sky-500 mx-auto mb-4 shadow-2xl shadow-sky-500/20">
+                <img src="/about/ab1.png" alt="Founder" className="w-full h-full object-cover" />
+              </div>
+              <h4 className="text-2xl font-bold text-white font-oswald">Mr. Constantine Santiago</h4>
+              <p className="text-sky-300 font-medium">Founder, President & Executive Director</p>
+            </div>
+          </div>
+        </div>
+
         {/* Patrons */}
         <div className="mb-16">
           <h3 className="text-xl font-bold text-blue-600 dark:text-sky-400 uppercase tracking-widest text-center mb-8 border-b border-gray-300 dark:border-white/10 pb-4 inline-block w-full">Patrons & Consultants</h3>
@@ -159,15 +173,6 @@ const AboutPage = () => {
         {/* Executive Committee */}
         <div className="mb-16">
           <h3 className="text-xl font-bold text-blue-600 dark:text-sky-400 uppercase tracking-widest text-center mb-8 border-b border-gray-300 dark:border-white/10 pb-4 inline-block w-full">Chief Executive Committee</h3>
-          <div className="flex flex-col items-center mb-10">
-            <div className="glass-card p-8 rounded-2xl border border-blue-500/30 dark:border-sky-500/30 text-center relative overflow-hidden bg-gradient-to-b from-blue-100/50 via-transparent to-transparent dark:from-sky-900/20">
-              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 dark:border-sky-500 mx-auto mb-4 shadow-2xl shadow-sky-500/20">
-                <img src="/about/ab1.png" alt="Founder" className="w-full h-full object-cover" />
-              </div>
-              <h4 className="text-2xl font-bold text-white font-oswald">Mr. Constantine Santiago</h4>
-              <p className="text-sky-300 font-medium">Founder, President & Executive Director</p>
-            </div>
-          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { img: "/about/ab2.png", name: "Mr. S. Wilfred", role: "Secretary" },

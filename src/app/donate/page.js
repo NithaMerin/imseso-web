@@ -93,6 +93,30 @@ const Donate = () => {
 
         {/* Bank Details */}
         <div className="space-y-12">
+          {/* GoFundMe Section */}
+          <div className="glass-card p-8 rounded-2xl border border-sky-500/30 text-center relative overflow-hidden bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-transparent mb-12">
+            <div className="absolute top-0 right-0 p-4 opacity-10">
+              <svg className="w-24 h-24 text-sky-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold font-oswald text-white mb-4">Support Our Cyclone Relief Effort</h3>
+            <p className="text-slate-300 mb-8 max-w-2xl mx-auto italic">
+              "Help Sri Lankans to survive and rebuild after Cyclone Ditwah"
+            </p>
+            <a
+              href="https://www.gofundme.com/f/help-sri-lankans-to-survive-and-rebuild-after-cyclone-ditwah"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-sky-500/20 group"
+            >
+              Donate via GoFundMe
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-2">Direct Bank Transfer</h3>
             <p className="text-slate-400 text-sm">Use the copy details button for easy transfer.</p>

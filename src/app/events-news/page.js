@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import FooterTab from '../components/FooterTab';
 
 // Sample data for updates
@@ -92,6 +92,9 @@ const meeting = [
 ]
 
 const EventsNewsPage = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const closeModal = () => setSelectedImage(null);
   return (
     <div className='bg-slate-900 min-h-screen text-slate-200 font-inter selection:bg-sky-500/30 transition-colors duration-300'>
 
@@ -154,7 +157,10 @@ const EventsNewsPage = () => {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {galleryImages.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer">
+              <div key={index}
+                className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
                 <img
                   src={image}
                   alt={`Event gallery image ${index + 1}`}
@@ -184,7 +190,10 @@ const EventsNewsPage = () => {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {teachers.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer">
+              <div key={index}
+                className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
                 <img
                   src={image}
                   alt={`Teacher training image ${index + 1}`}
@@ -214,7 +223,10 @@ const EventsNewsPage = () => {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {mental.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer">
+              <div key={index}
+                className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
                 <img
                   src={image}
                   alt={`Mental health training image ${index + 1}`}
@@ -244,7 +256,10 @@ const EventsNewsPage = () => {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {children.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer">
+              <div key={index}
+                className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
                 <img
                   src={image}
                   alt={`Children learning program image ${index + 1}`}
@@ -274,7 +289,10 @@ const EventsNewsPage = () => {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {woman.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer">
+              <div key={index}
+                className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
                 <img
                   src={image}
                   alt={`Women empowerment initiative image ${index + 1}`}
@@ -304,7 +322,10 @@ const EventsNewsPage = () => {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {meeting.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer">
+              <div key={index}
+                className="aspect-square overflow-hidden rounded-xl border border-white/10 relative group cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
                 <img
                   src={image}
                   alt={`Projects discussion meeting image ${index + 1}`}
@@ -321,6 +342,37 @@ const EventsNewsPage = () => {
           </div>
         </section>
       </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 animate-in fade-in duration-300"
+          onClick={closeModal}
+        >
+          <button
+            className="absolute top-6 right-6 text-white hover:text-sky-400 transition-colors p-2 z-[60]"
+            onClick={closeModal}
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div
+            className="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center animate-in zoom-in-95 duration-300"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedImage}
+              alt="Full size event image"
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl border border-white/10"
+              onError={(e) => {
+                e.target.src = '/icons/about.jpg';
+              }}
+            />
+          </div>
+        </div>
+      )}
 
       <FooterTab />
     </div>

@@ -94,7 +94,7 @@ const Donate = () => {
         {/* Bank Details */}
         <div className="space-y-12">
           {/* GoFundMe Section */}
-          <div className="glass-card p-8 rounded-2xl border border-sky-500/30 text-center relative overflow-hidden bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-transparent mb-12">
+          {/* <div className="glass-card p-8 rounded-2xl border border-sky-500/30 text-center relative overflow-hidden bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-transparent mb-12">
             <div className="absolute top-0 right-0 p-4 opacity-10">
               <svg className="w-24 h-24 text-sky-400" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
@@ -115,7 +115,7 @@ const Donate = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </a>
-          </div>
+          </div> */}
 
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-2">Direct Bank Transfer</h3>

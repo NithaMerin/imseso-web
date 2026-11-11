@@ -13,6 +13,7 @@
     "clean": "npx rimraf node_modules package-lock.json .next"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.89.0",
     "@tailwindcss/postcss": "^4.0.9",
     "framer-motion": "^12.4.7",
     "next": "15.1.11",
@@ -28,7 +29,7 @@
     "react-material-ui-carousel": "false"
   },
   "devDependencies": {
-    "eslint": "9.39.2",
+    "eslint": "^9.39.2",
     "eslint-config-next": "16.1.1",
     "gh-pages": "^6.3.0",
     "rimraf": "^6.0.1",

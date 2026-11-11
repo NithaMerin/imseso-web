@@ -54,8 +54,14 @@ const FooterTab = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-500">
+        <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-500 flex flex-col md:flex-row items-center justify-between gap-4">
           <p>&copy; {new Date().getFullYear()} IMSESO. All rights reserved.</p>
+          <a href="/admin/login" className="hover:text-sky-400 transition-colors flex items-center space-x-1 group">
+            <svg className="w-3 h-3 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z" />
+            </svg>
+            <span>Admin Board</span>
+          </a>
         </div>
       </div>
     </footer>

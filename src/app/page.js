@@ -100,68 +100,88 @@ const HomePage = () => {
       <div className="container flex flex-col items-center gap-4 m-4">
 
         {/* New Section: Sri Lanka Flood Relief */}
-        <div className="w-full max-w-6xl mt-8 px-4 md:px-0">
-          <h2 className="text-2xl md:text-5xl font-extrabold text-sky-400 text-center head-oswald mb-6">
-            Holding Each Other Through Hard Times: <br />Sri Lanka Flood Relief
-          </h2>
-          <h3 className="text-xl md:text-2xl font-bold text-slate-300 text-center head-oswald mb-6 italic">
-            Finding Strength in the Healing Power of Belonging
-          </h3>
-          <div className="flex justify-center mb-6">
-            <Link href="/donate">
-              <img
-                src="/Fundraiser.jpg" // Replace with actual image path
-                alt="Sri Lanka Flood Relief"
-                className="w-full max-w-2xl h-96 md:h-[28rem] object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-              />
-            </Link>
-          </div>
+        <div className="w-full max-w-6xl mt-8 px-4 md:px-0 mx-auto">
           <div className="text-center">
-            <p className="text-slate-300 text-justify head-oswald leading-relaxed max-w-4xl mx-auto">
-              This fundraiser is more than a response to a natural disaster — it is an act of solidarity with people
-              who have been cultivating NVC values ​​for years, often under challenging social and economic
-              conditions. The Sri Lankan NVC community has been steadily growing, with practitioners working
-              in schools, interfaith dialogue, mental health, community peacebuilding, and youth development.
-              Now, many of these same people are directly affected by the floods.
-              <br /><br />
-              We are collaborating with a local Sri Lankan NGO that works on the ground in coordination with
-              local authorities to deliver essential supplies, especially in Mannar and  Nuwara Eliya and other
-              severely affected areas. All funds will go directly to flood relief and support for the families affected.
-              <br /><br />
-              <strong>Why this matters</strong><br />
-              This is not only a fundraiser it is a call to collective care. The people we are supporting are Sri
-              Lankan citizens, and individuals who live NVC as a daily practice and who have, for years,
-              contributed to their communities through nonviolence, reconciliation, trauma support, youth
-              empowerment, and social transformation. Many continue their service even in the midst of crisis.
-              Your support helps ensure they can meet basic needs now — and continue their meaningful
-              work in the future.
-              <br /><br />
-              <strong>Project summary</strong><br />
-              Cyclone Ditwah caused widespread flooding and landslides across multiple districts in Sri
-              Lanka, severely disrupting school communities. Many students experienced displacement, loss
-              of homes, interruption of education, and exposure to distressing events. These experiences have
-              significantly increased psychological stress, anxiety, fear, and behavioral challenges among
-              children. severely affecting districts such as Mannar, Batticaloa, Badulla, Nuwara Eliya Districts.
-              <br /><br />
-              <strong>Goal of the Project</strong><br />
-              To strengthen the self-reliance of disaster-affected communities in four targeted districts by
-              improving educational continuity, psychosocial wellbeing, peaceful community relations, youth
-              leadership, sustainable livelihoods, and environmental protection.
-              <br /><br />
-              <strong>Specific Objectives</strong><br />
-              • Providing clean water and heath services in the flood effed villages.<br />
-              • Improve educational access and continuity for children affected by disasters.<br />
-              • Provide psychosocial support and build emotional resilience among children, youth, and
-              families.<br />
-              • Promote Non-Violent Communication (NVC) and peaceful coexistence within
-              communities.<br />
-              • Strengthen youth leadership, employability, and civic engagement.<br />
-              • Restore and diversify livelihoods for families affected by disasters.<br />
-              • Promote environmental sustainability and community-based disaster risk reduction
-              (DRR).
-            </p>
+            <h2 className="text-2xl md:text-5xl font-extrabold text-sky-400 head-oswald mb-2">
+              MANDATE & STRATEGIC FOCUS
+            </h2>
+            <h3 className="text-lg md:text-2xl font-semibold text-sky-200 head-oswald mb-6">
+              Child &amp; Youth Empowerment in Sri Lanka
+            </h3>
+
+            <h4 className="text-xl md:text-2xl font-bold text-slate-300 head-oswald mb-6 italic">
+              ORGANIZATIONAL MANDATE
+            </h4>
           </div>
-          <div className="flex justify-start items-center gap-4 mt-6 max-w-4xl mx-auto">
+
+          <div className="mx-auto max-w-4xl text-slate-300 head-oswald leading-relaxed space-y-6 text-justify">
+            <p>
+              IMSESO is committed to the holistic development, protection, and empowerment of children and youth in Sri
+              Lanka, particularly in vulnerable, post-conflict, economically marginalized, disaster-affected, urban, rural, and
+              estate communities.
+            </p>
+
+            <p>
+              IMSESO works in alignment with national institutions including the Ministry of Education, Ministry of Health,
+              National Child Protection Authority, Ministry of Women, Child Affairs and Social Empowerment, and National
+              Youth Services Council.
+            </p>
+
+            <div>
+              <strong className="block mb-2 text-white">CORE MANDATE AREAS</strong>
+              <ul className="list-disc ml-6 md:ml-8 space-y-2">
+                <li>Child rights protection and safeguarding</li>
+                <li>Mental health and psychosocial wellbeing and nonviolent communication promotion</li>
+                <li>Water, Sanitation &amp; Hygiene (WASH) in schools and communities</li>
+                <li>Youth empowerment and leadership development</li>
+                <li>Suicide prevention and substance abuse interventions</li>
+                <li>Eco-leadership development for children and youth</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong className="block mb-3 text-white">STRATEGIC OBJECTIVES</strong>
+
+              <div className="space-y-6">
+                <div>
+                  <h5 className="font-semibold">1. Child Protection &amp; Safe Environments</h5>
+                  <ul className="list-disc ml-6 md:ml-8 space-y-1">
+                    <li>Strengthen community-based child protection systems</li>
+                    <li>Prevent abuse, neglect, exploitation, and early marriage</li>
+                    <li>Promote child-friendly schools, safe families and nurturing community spaces</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h5 className="font-semibold">2. Education &amp; Skills Development</h5>
+                  <ul className="list-disc ml-6 md:ml-8 space-y-1">
+                    <li>Support school retention and reintegration</li>
+                    <li>Promote practical life skills and transformative value education</li>
+                    <li>Provide market-aligned vocational training and apprenticeship pathways</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h5 className="font-semibold">3. Youth Leadership &amp; Civic Engagement</h5>
+                  <ul className="list-disc ml-6 md:ml-8 space-y-1">
+                    <li>Empower young people to take ownership of initiatives and strengthen community development through innovation and sustained engagement</li>
+                    <li>Promote volunteerism and community service</li>
+                    <li>Encourage youth participation in local governance</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h5 className="font-semibold">4. Inclusion &amp; Equity</h5>
+                  <ul className="list-disc ml-6 md:ml-8 space-y-1">
+                    <li>Promote gender equality and inclusive leadership</li>
+                    <li>Ensure disability inclusion and meaningful participation</li>
+                    <li>Engage marginalized socioeconomic, religious, linguistic, and cultural communities and amplify their voice</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="flex justify-start items-center gap-4 mt-6 max-w-4xl mx-auto">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdQi3NIt-358qfuCy_PT6TK1fUEHv4EXzGs3Vudjm-ezSEtVg/viewform"
               target="_blank"
@@ -178,7 +198,7 @@ const HomePage = () => {
             >
               More Info
             </a>
-          </div>
+          </div> */}
 
           {/* Video Section */}
           <div className="mt-8 flex justify-center">
